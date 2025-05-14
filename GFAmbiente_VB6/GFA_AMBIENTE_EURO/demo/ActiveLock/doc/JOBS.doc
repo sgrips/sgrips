@@ -1,0 +1,169 @@
+Jobs for Hackers: Yes, You Can Eat Open Source
+
+In the last section of "The Cathedral and the Bazaar", Eric S. Raymond
+argued that the bazaar development  mode may be so much more effective
+than the cathedral mode that open-source software may eventually drive
+closed, proprietary software almost completely out of the market.
+
+The OSI  doesn't have  a position either  for or  against intellectual
+property  rights in software.  ESR, one  of our  co-founders, supports
+them; others have different  positions. We believe that the contention
+over this  issue that has  polarized the open-source community  in the
+past is largely pointless,  because the best arguments for open-source
+are grounded in economics and engineering.
+
+We suspect  that in the future selective  pressures for higher-quality
+software will favor  the open- source model so  heavily that closed or
+"shrouded" software  becomes the  exceptional case. Indeed,  there are
+some kinds of software (including many mission-critical Internet tools
+such as DNS) for which this is already true.
+
+Can Programming Survive?
+
+When  OSI  representatives speak  in  public,  we're  often asked  the
+following questions:
+
+How  can  I  make  a   living  doing  open-source  software?   If  the
+open-source model wins out, will programmers starve?  Can corporations
+earn good returns on selling open-source?
+
+We  don't have  final answers.  But we  have been  thinking  about the
+question enough to make some suggestions.
+
+How can I make a living doing open-source software?
+
+There  are  companies making  money  programming open-source  software
+right  now.  Red  Hat, Cygnus,  and  Caldera  are  three of  the  best
+known. There are others.
+
+If open-source wins out, will programmers starve?
+
+We  don't  think  the  triumph  of open-source  will  doom  anyone  to
+starvation. But to understand why not, we need to take a fresh look at
+the economics of software and the work that programmers actually do.
+
+Computer programs  have three kinds  of economic value. They  have use
+value, market value, and monopoly value.
+
+The use value of a program is its economic value as a tool. The market
+value of a program is its  value as a saleable commodity. The monopoly
+value is the value you gain not  just from having the use of a program
+but from having it be unavailable to your competitors.
+
+The standard nightmare programmers have  about open source is what ESR
+calls  the "Open-  Source  Doomsday" scenario.  This  starts with  the
+market value and  monopoly value of software going  to zero because of
+all the free sources out there. Use value alone doesn't attract enough
+consumers  to support  software development.  The  commercial software
+industry collapses.  Programmers starve  or leave the  field. Doomsday
+arrives when  the open-source culture  itself (dependent on  the spare
+time  of all  these pros)  collapses,  leaving nobody  around who  can
+program competently. All die. Oh, the embarrassment!
+
+People who worry  about "Open Source Doomsday" have  lost sight of one
+fundamental fact: If  having a program written is  a net economic gain
+for a customer over not having  it written, a programmer will get paid
+whether or not the program is going to be free after it's done.
+
+The doomsday scenario also rests on several shaky assumptions:
+
+Programming will collapse if software has no market value
+
+Very  unlikely.  Code  written for  resale  is  only  the tip  of  the
+programming iceberg.  It used to be said  that 85% of all  the code in
+the world was written in-house  at banks and insurance companies. This
+is probably no  longer the case (and a good thing;  who in their right
+mind wants  to wear a  tie and grind  out huge volumes of  COBOL?) but
+most  estimates put  the proportion  of all  code written  in-house at
+companies other than software vendors at over 75%.
+
+This "vertical" code includes most of the stuff of MIS, the financial-
+and  database-software customizations every  medium and  large company
+needs.  It  includes technical-specialist  stuff  like device  drivers
+(nobody tries to make money  selling device drivers!). It includes all
+kinds of embedded code  for our increasingly microchip-driven machines
+– from machine  tools and jet airliners to  cars to microwave ovens
+and toasters.
+
+Most vertical  code is  integrated with its  environment in  ways that
+make reusing or  copying it very difficult. (This  is true whether the
+"environment"  is  a  business  office's  set  of  procedures  or  the
+fuel-injection  system   of  a   combine  harvester.)  Thus,   as  the
+environment changes, there is a lot of work continually needed to keep
+the software in step.
+
+This  is called "maintenance",  and any  software engineer  or systems
+analyst  will tell  you that  it makes  up the  vast majority  of what
+programmers get  paid to do. And it  will still need to  be done, even
+when most software is open-source.
+
+Between  originating, customizing and  maintaining vertical  code (and
+related tasks like system administration and troubleshooting), the use
+value of  software would  still support the  millions of good  jobs in
+that 75% even if all "horizontal" or standalone software were free.
+
+So even  if we  make absolute worst-case  assumptions about  the other
+factors in the "Open Software  Doomsday" scenario, only at most 25% of
+the  programming  profession is  exposed.  As  we'll  see, the  actual
+exposure is probably much lower, and there may be none at all.
+
+Open-source software has no market value
+
+We know  this isn't true.  Probably the purest demonstration  today is
+Red Hat, which  has built a flourishing business  selling software you
+can download for free from Red Hat's own web site! Red Hat's sales are
+doubling every year.
+
+What you're really buying from them is handholding and support for the
+"free"  stuff they  sell  – a  single  place to  go  when you  have
+problems.  In 1998  there  are  probably close  to  a dozen  companies
+working this model successfully.
+
+Open-source software has no monopoly value
+
+Even  this may not  be true.  Adopting or  even just  studying someone
+else's software is  not a costless, frictionless process;  you need to
+dedicate   skilled  time  to   it.  As   product  cycle   times  drop,
+coattail-riding  gets  less  attractive,  because  the  payoff  period
+shrinks  relative to  the  time you  had  to dedicate.  And time  your
+skilled people  spend studying someone else's "monopoly"  code is time
+you're spending  getting to where  the competition used to  be (rather
+than where they are now).
+
+You  can read an  extended discussion  of the  context in  which trade
+secrets may still make sense.
+
+Outsourcing open-source development means a loss of in-house jobs
+
+At some individual  shops, some of the time,  maybe. Even this doesn't
+seem very likely.  When did you last see  a software development group
+that didn't have way more than enough work waiting for it?
+
+Open  source   certainly  does  not  necessarily   mean  the  software
+development  industry   as  a  whole  will  shed   paying  jobs;  with
+programming talent  as scarce  relative to demand  as it has  been, it
+probably  just means  more commercial  projects will  be able  to find
+bodies to do them.
+
+Can corporations earn good returns on selling open-source?
+
+This,  too, is  an important  question. There  may still  be a  lot of
+programming work  if the  software-for-sale industry tanks,  but maybe
+fewer of the jobs dedicated programmers and hackers really want.
+
+We  address this  question in  the business  case for  open-source. We
+believe  there  are serveral  different  business  models under  which
+selling software  would still be  viable in an open-source  world –
+and both have exemplars today.
+
+Conclusion
+
+Yes,  we can  live  on  open-source software.  The  industry would  go
+through an earthquake adjusting; a lot of us would see our jobs change
+or be redefined. But there would  still be lots of programming work to
+do  for pay,  we'd  have much  better tools  to  do it  with –  and
+Microsoft's stultifying monopoly would almost certainly be no more ...
+
+---
+
+http://www.opensource.org/advocacy/jobs.php

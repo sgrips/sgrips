@@ -1,0 +1,32 @@
+[version]
+WJF-version=1
+[files]
+0=FI+C:\Documents and Settings\Antonio&Sara\Documenti\Sviluppi\GFAmbienteEuro\
+[output]
+base=GFAmbienteEuro.zip
+baseappend=0
+folder=<^24>\My WinZip Files
+folderappend=0
+log=none
+logfolder=
+logoverwrite=1
+logtojobfolder=1
+[options]
+jobflags=0004
+compression=0
+span=1
+split=0
+splitunit=bytes
+pwmode=0
+cryptmode=0
+pathmode=1
+CdWriteSpeed=-1
+CdFinalize=1
+[schedule]
+type=2
+taskname=WinZip Job-GFAmbienteEuro
+time=12:30
+freq=1
+sel=97
+[wizard]
+UseVars=0

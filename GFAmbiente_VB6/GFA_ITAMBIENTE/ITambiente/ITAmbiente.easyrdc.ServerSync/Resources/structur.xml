@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<schemaini>
+  <!-- Schema.INI, definizione dei file testo per utilizzare il driver OLEDB   -->
+	<section name="Movimenti.csv">
+		<element ColNameHeader="True" DateTimeFormat="yyyy/mm/dd" TextDelimeter=""	Format="Delimited(,)"	MaxScanRows="25"  DecimalSymbol="." CharacterSet="OEM"/>
+		<cols>
+      <col name="ID_CodPesa" type="Char" width="30"/>
+      <col name="CodBadge" type="Char" width="30"/>
+      <col name="CodUtente" type="Integer"/>
+      <col name="CodImmobile" type="Integer"/>
+			<col name="CodSottoCategoria" type="Char" width="2"/>			
+			<col name="CodCategoria" type="Char" width="2"/>
+			<col name="CodCer" type="Char" width="2"/>
+			<col name="Quantita" type="Float" />
+			<col name="UnitaDiMisura" type="Char" width="3"/>
+			<col name="Data" type="Char" width="19"/>
+            <col name="CodIstat" type="Char" width="6"/>
+            <col name="idAlibiMemory" type="Char" width="30"/>
+            <col name="CodSubCer" type="Char" width="2"/>
+		</cols>
+	</section>	
+</schemaini>
+

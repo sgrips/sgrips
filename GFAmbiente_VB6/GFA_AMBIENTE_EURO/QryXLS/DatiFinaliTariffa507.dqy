@@ -1,0 +1,7 @@
+XLODBC
+1
+DSN=Database di Microsoft Access;DBQ=C:\Sviluppi\GFAmbienteEuro\StudioAmbiente2002.mdb;DefaultDir=C:\Sviluppi\GFAmbienteEuro;DriverId=25;FIL=MS Access;MaxBufferSize=2048;PageTimeout=5;UID=admin;
+SELECT DatiFinaliCalcoloTarsu507.CodComune, DatiFinaliCalcoloTarsu507.AnnoRiferimento, DatiFinaliCalcoloTarsu507.CostoTotale, DatiFinaliCalcoloTarsu507.Gettito, DatiFinaliCalcoloTarsu507.CMG, DatiFinaliCalcoloTarsu507.CoeffCorrettivoIPS, DatiFinaliCalcoloTarsu507.ProdMedia, DatiFinaliCalcoloTarsu507.Copertura, DatiFinaliCalcoloTarsu507.flgSimulazione  FROM `C:\Sviluppi\GFAmbienteEuro\StudioAmbiente2002`.DatiFinaliCalcoloTarsu507 DatiFinaliCalcoloTarsu507  WHERE (DatiFinaliCalcoloTarsu507.AnnoRiferimento=?) AND (DatiFinaliCalcoloTarsu507.CodComune=?)
+@AnnoRiferimento	@CodComune
+12	12
+CodComune	AnnoRiferimento	CostoTotale	Gettito	CMG	CoeffCorrettivoIPS	ProdMedia	Copertura	flgSimulazione

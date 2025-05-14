@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetMDB" targetNamespace="http://tempuri.org/DataSetMDB.xsd" xmlns:mstns="http://tempuri.org/DataSetMDB.xsd" xmlns="http://tempuri.org/DataSetMDB.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueryMovimenti" GeneratorFunctionsComponentClassName="QueryMovimenti" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueryMovimenti" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="OleDBMSAccess" IsAppSettingsProperty="true" Modifier="Assembly" Name="OleDBMSAccess (MySettings)" PropertyReference="ApplicationSettings.ITAmbiente.easyrdc.Sync.My.MySettings.GlobalReference.Default.OleDBMSAccess" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="elosbartConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="elosbartConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ITAmbiente.easyrdc.Sync.My.MySettings.GlobalReference.Default.elosbartConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TotaliPerBadgeTableAdapter" GeneratorDataComponentClassName="TotaliPerBadgeTableAdapter" Name="TotaliPerBadge" UserDataComponentName="TotaliPerBadgeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OleDBMSAccess (MySettings)" DbObjectName="TotaliPerBadge" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     TotaliPerBadge.*
+FROM         TotaliPerBadge</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CodBadge" DataSetColumn="CodBadge" />
+              <Mapping SourceColumn="CodUtente" DataSetColumn="CodUtente" />
+              <Mapping SourceColumn="CodiciCerCodCategoria" DataSetColumn="CodiciCerCodCategoria" />
+              <Mapping SourceColumn="CodiciCerCodSottoCategoria" DataSetColumn="CodiciCerCodSottoCategoria" />
+              <Mapping SourceColumn="CodiciCerCodCer" DataSetColumn="CodiciCerCodCer" />
+              <Mapping SourceColumn="UnitaDiMisura" DataSetColumn="UnitaDiMisura" />
+              <Mapping SourceColumn="SomQty" DataSetColumn="SomQty" />
+              <Mapping SourceColumn="SomBonus" DataSetColumn="SomBonus" />
+              <Mapping SourceColumn="PuntiBonus" DataSetColumn="PuntiBonus" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetMDB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetMDB" msprop:Generator_UserDSName="DataSetMDB">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TotaliPerBadge" msprop:Generator_UserTableName="TotaliPerBadge" msprop:Generator_RowEvArgName="TotaliPerBadgeRowChangeEvent" msprop:Generator_TableVarName="tableTotaliPerBadge" msprop:Generator_TablePropName="TotaliPerBadge" msprop:Generator_RowDeletingName="TotaliPerBadgeRowDeleting" msprop:Generator_RowChangingName="TotaliPerBadgeRowChanging" msprop:Generator_RowDeletedName="TotaliPerBadgeRowDeleted" msprop:Generator_RowEvHandlerName="TotaliPerBadgeRowChangeEventHandler" msprop:Generator_RowChangedName="TotaliPerBadgeRowChanged" msprop:Generator_TableClassName="TotaliPerBadgeDataTable" msprop:Generator_RowClassName="TotaliPerBadgeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodBadge" msprop:Generator_ColumnVarNameInTable="columnCodBadge" msprop:Generator_ColumnPropNameInRow="CodBadge" msprop:Generator_ColumnPropNameInTable="CodBadgeColumn" msprop:Generator_UserColumnName="CodBadge">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodUtente" msprop:Generator_ColumnVarNameInTable="columnCodUtente" msprop:Generator_ColumnPropNameInRow="CodUtente" msprop:Generator_ColumnPropNameInTable="CodUtenteColumn" msprop:Generator_UserColumnName="CodUtente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodiciCerCodCategoria" msprop:Generator_ColumnVarNameInTable="columnCodiciCerCodCategoria" msprop:Generator_ColumnPropNameInRow="CodiciCerCodCategoria" msprop:Generator_ColumnPropNameInTable="CodiciCerCodCategoriaColumn" msprop:Generator_UserColumnName="CodiciCerCodCategoria">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodiciCerCodSottoCategoria" msprop:Generator_ColumnVarNameInTable="columnCodiciCerCodSottoCategoria" msprop:Generator_ColumnPropNameInRow="CodiciCerCodSottoCategoria" msprop:Generator_ColumnPropNameInTable="CodiciCerCodSottoCategoriaColumn" msprop:Generator_UserColumnName="CodiciCerCodSottoCategoria">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodiciCerCodCer" msprop:Generator_ColumnVarNameInTable="columnCodiciCerCodCer" msprop:Generator_ColumnPropNameInRow="CodiciCerCodCer" msprop:Generator_ColumnPropNameInTable="CodiciCerCodCerColumn" msprop:Generator_UserColumnName="CodiciCerCodCer">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UnitaDiMisura" msprop:Generator_ColumnVarNameInTable="columnUnitaDiMisura" msprop:Generator_ColumnPropNameInRow="UnitaDiMisura" msprop:Generator_ColumnPropNameInTable="UnitaDiMisuraColumn" msprop:Generator_UserColumnName="UnitaDiMisura">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SomQty" msprop:Generator_ColumnVarNameInTable="columnSomQty" msprop:Generator_ColumnPropNameInRow="SomQty" msprop:Generator_ColumnPropNameInTable="SomQtyColumn" msprop:Generator_UserColumnName="SomQty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SomBonus" msprop:Generator_ColumnVarNameInTable="columnSomBonus" msprop:Generator_ColumnPropNameInRow="SomBonus" msprop:Generator_ColumnPropNameInTable="SomBonusColumn" msprop:Generator_UserColumnName="SomBonus" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PuntiBonus" msprop:Generator_ColumnVarNameInTable="columnPuntiBonus" msprop:Generator_ColumnPropNameInRow="PuntiBonus" msprop:Generator_ColumnPropNameInTable="PuntiBonusColumn" msprop:Generator_UserColumnName="PuntiBonus" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TotaliPerBadge" />
+      <xs:field xpath="mstns:CodBadge" />
+      <xs:field xpath="mstns:CodUtente" />
+      <xs:field xpath="mstns:CodiciCerCodCategoria" />
+      <xs:field xpath="mstns:CodiciCerCodSottoCategoria" />
+      <xs:field xpath="mstns:CodiciCerCodCer" />
+      <xs:field xpath="mstns:UnitaDiMisura" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

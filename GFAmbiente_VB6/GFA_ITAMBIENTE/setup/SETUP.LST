@@ -1,0 +1,191 @@
+[Bootstrap]
+SetupTitle=Install
+SetupText=Copying Files, please stand by.
+CabFile=IsolaEcologica.CAB
+Spawn=Setup1.exe
+Uninstal=st6unst.exe
+TmpDir=msftqws.pdw
+Cabs=1
+
+[Bootstrap Files]
+File1=@VB6STKIT.DLL,$(WinSysPathSysFile),,,6/18/98 1:00:00 AM,102912,6.0.81.69
+File2=@COMCAT.DLL,$(WinSysPathSysFile),$(DLLSelfRegister),,5/31/98 1:00:00 AM,22288,4.71.1460.1
+File3=@asycfilt.dll,$(WinSysPathSysFile),,,3/7/17 6:17:40 PM,67584,6.1.7601.23713
+File4=@olepro32.dll,$(WinSysPathSysFile),$(DLLSelfRegister),,11/21/10 5:24:03 AM,90112,6.1.7601.17514
+File5=@oleaut32.dll,$(WinSysPathSysFile),$(DLLSelfRegister),,4/16/19 5:17:31 PM,583680,6.1.7601.24440
+File6=@stdole2.tlb,$(WinSysPathSysFile),$(TLBRegister),,7/14/09 1:43:53 AM,16896,6.1.7600.16385
+File7=@msvbvm60.dll,$(WinSysPathSysFile),$(DLLSelfRegister),,7/14/09 3:15:50 AM,1386496,6.0.98.15
+
+[IconGroups]
+Group0=Easy RDC
+PrivateGroup0=False
+Parent0=$(Programs)
+
+[Easy RDC]
+Icon1="IsolaEcologica.exe"
+Title1=Easy RDC
+StartIn1=$(AppPath)
+
+[Setup]
+Title=Easy RDC
+DefaultDir=$(ProgramFiles)\IsolaEcologica
+AppExe=IsolaEcologica.exe
+AppToUninstall=IsolaEcologica.exe
+
+[Setup1 Files]
+File1=@Verde.gif,$(AppPath),,,9/29/11 12:38:16 PM,1461,0.0.0.0
+File2=@tv.gif,$(AppPath),,,3/23/09 3:53:26 PM,2937,0.0.0.0
+File3=@Tubi fluorescenti.gif,$(AppPath),,,2/11/11 7:23:27 PM,43254,0.0.0.0
+File4=@tessili.gif,$(AppPath),,,9/29/11 12:38:06 PM,1448,0.0.0.0
+File5=@ramaglie.gif,$(AppPath),,,3/23/09 3:53:26 PM,2302,0.0.0.0
+File6=@plastica.gif,$(AppPath),,,9/29/11 12:37:52 PM,1363,0.0.0.0
+File7=@pile.gif,$(AppPath),,,9/29/11 12:37:42 PM,1552,0.0.0.0
+File8=@pericolosi.gif,$(AppPath),,,9/29/11 12:37:32 PM,1719,0.0.0.0
+File9=@Penna.gif,$(AppPath),,,9/29/11 12:37:20 PM,1517,0.0.0.0
+File10=@organico.gif,$(AppPath),,,9/29/11 12:37:08 PM,1443,0.0.0.0
+File11=@Olio.gif,$(AppPath),,,2/11/11 7:27:59 PM,43254,0.0.0.0
+File12=@multimateriale.gif,$(AppPath),,,4/2/09 11:44:26 AM,1996,0.0.0.0
+File13=@metallici.gif,$(AppPath),,,4/7/09 12:40:16 PM,1702,0.0.0.0
+File14=@medicinali.gif,$(AppPath),,,3/23/09 3:53:26 PM,2349,0.0.0.0
+File15=@Lavatrice.gif,$(AppPath),,,9/29/11 12:36:58 PM,1436,0.0.0.0
+File16=@lattine.gif,$(AppPath),,,3/23/09 3:53:26 PM,2118,0.0.0.0
+File17=@inerti.gif,$(AppPath),,,9/29/11 12:50:26 PM,15759,0.0.0.0
+File18=@frigo.gif,$(AppPath),,,3/23/09 3:53:26 PM,2290,0.0.0.0
+File19=@farmaci.gif,$(AppPath),,,9/29/11 12:36:44 PM,1421,0.0.0.0
+File20=@divano.gif,$(AppPath),,,9/29/11 12:36:30 PM,1467,0.0.0.0
+File21=@cucina.gif,$(AppPath),,,3/23/09 3:53:26 PM,2303,0.0.0.0
+File22=@cer.gif,$(AppPath),,,3/23/09 3:53:26 PM,669,0.0.0.0
+File23=@carta.gif,$(AppPath),,,9/29/11 12:36:14 PM,1392,0.0.0.0
+File24=@Alluminio.gif,$(AppPath),,,3/23/09 3:53:26 PM,2558,0.0.0.0
+File25=@vetro.gif,$(AppPath),,,9/29/11 12:38:26 PM,1460,0.0.0.0
+File26=@Storico.mdb,$(AppPath),,,10/26/11 6:06:52 PM,679936,0.0.0.0
+File27=@Report.mdb,$(AppPath),,,11/12/10 3:14:56 PM,528384,0.0.0.0
+File28=@LED BOARD REVERSED.ttf,$(Font),,$(Shared),6/27/08 5:32:30 PM,172496,0.0.0.0
+File29=@TracciatoLegameBarcodeBadge.ini,$(AppPath),,,9/26/11 1:02:54 PM,281,0.0.0.0
+File30=@unzip.exe,$(AppPath),,,3/23/98 4:19:12 PM,145408,0.0.0.0
+File31=@PlexaNetKProj1.oca,$(AppPath),,,2/24/17 4:11:49 PM,34816,0.0.0.0
+File32=@PlexaNetKProj1.lic,$(AppPath),,,3/21/06 2:02:52 PM,41,0.0.0.0
+File33=@TracciatoImmUte.ini,$(AppPath),,,2/17/16 7:26:56 PM,4120,0.0.0.0
+File34=@MessaggioPesa.ini,$(AppPath),,,7/16/09 6:25:18 PM,695,0.0.0.0
+File35=@TracciatoUteBadge.ini,$(AppPath),,,5/20/11 3:13:21 PM,679,0.0.0.0
+File36=@view_iconDisabled.ico,$(AppPath),,,5/12/09 10:04:22 AM,26694,0.0.0.0
+File37=@view_icon.ico,$(AppPath),,,5/11/09 1:20:08 PM,26694,0.0.0.0
+File38=@view_detailedDisabled.ico,$(AppPath),,,5/12/09 10:00:20 AM,26694,0.0.0.0
+File39=@view_detailed.ico,$(AppPath),,,5/11/09 1:20:42 PM,26694,0.0.0.0
+File40=@validate.jpg,$(AppPath),,,5/1/09 6:01:30 PM,1063,0.0.0.0
+File41=@UpdateForm.ico,$(AppPath),,,5/11/09 5:25:24 PM,26694,0.0.0.0
+File42=@Studenti.ico,$(AppPath),,,5/18/09 10:15:38 AM,26694,0.0.0.0
+File43=@Stockage.gif,$(AppPath),,,3/12/09 12:54:08 PM,17549,0.0.0.0
+File44=@società.png,$(AppPath),,,4/25/08 11:48:30 PM,3775,0.0.0.0
+File45=@società.ico,$(AppPath),,,5/14/09 9:39:56 AM,26694,0.0.0.0
+File46=@sezione.ico,$(AppPath),,,5/16/09 3:23:48 PM,25550,0.0.0.0
+File47=@scuola.ico,$(AppPath),,,5/16/09 3:24:26 PM,25550,0.0.0.0
+File48=@save.ico,$(AppPath),,,5/11/09 1:09:14 PM,26694,0.0.0.0
+File49=@rifiuti trasportabili.png,$(AppPath),,,4/25/08 5:27:24 PM,4006,0.0.0.0
+File50=@rifiuti trasportabili.ico,$(AppPath),,,5/16/09 3:29:12 PM,25550,0.0.0.0
+File51=@People.ico,$(AppPath),,,3/12/09 1:06:58 PM,431726,0.0.0.0
+File52=@People.gif,$(AppPath),,,3/12/09 12:54:02 PM,5065,0.0.0.0
+File53=@OverUpd.ico,$(AppPath),,,5/13/09 9:44:36 AM,26694,0.0.0.0
+File54=@OverNew.ico,$(AppPath),,,5/13/09 9:43:02 AM,26694,0.0.0.0
+File55=@OverDel.ico,$(AppPath),,,5/13/09 9:41:26 AM,26694,0.0.0.0
+File56=@operazioni.png,$(AppPath),,,4/26/08 2:55:52 AM,3073,0.0.0.0
+File57=@operazioni.ico,$(AppPath),,,5/16/09 3:28:16 PM,25550,0.0.0.0
+File58=@NewFormDisabled.ico,$(AppPath),,,5/12/09 10:06:44 AM,26694,0.0.0.0
+File59=@NewForm.ico,$(AppPath),,,5/11/09 1:14:22 PM,26694,0.0.0.0
+File60=@ITambiente.jpg,$(AppPath),,,3/12/09 12:03:48 PM,56566,0.0.0.0
+File61=@ITAmbiente.ico,$(AppPath),,,3/19/09 9:27:56 AM,7758,0.0.0.0
+File62=@ITambiente logoMini.jpg,$(AppPath),,,3/12/09 12:03:48 PM,56566,0.0.0.0
+File63=@ITambiente logo.ico,$(AppPath),,,3/12/09 12:23:14 PM,2038,0.0.0.0
+File64=@ITAmbiente48.ico,$(AppPath),,,3/19/09 9:29:26 AM,3774,0.0.0.0
+File65=@ITAmbiente32.ico,$(AppPath),,,3/19/09 9:37:24 AM,2238,0.0.0.0
+File66=@ITAmbiente24.ico,$(AppPath),,,3/19/09 9:30:06 AM,1758,0.0.0.0
+File67=@ITambiente16.ico,$(AppPath),,,3/12/09 12:23:14 PM,2038,0.0.0.0
+File68=@Istituto.ico,$(AppPath),,,5/16/09 3:25:28 PM,25550,0.0.0.0
+File69=@industria.wmf,$(AppPath),,,9/16/99 8:24:12 PM,6634,0.0.0.0
+File70=@impianto.png,$(AppPath),,,4/25/08 11:48:10 PM,4236,0.0.0.0
+File71=@Impianto.ico,$(AppPath),,,5/14/09 9:39:18 AM,26694,0.0.0.0
+File72=@icons (424).ico,$(AppPath),,,3/12/09 1:09:02 PM,178366,0.0.0.0
+File73=@icons (29).ico,$(AppPath),,,3/12/09 1:08:00 PM,12918,0.0.0.0
+File74=@hand.cur,$(AppPath),,,3/25/98 12:23:18 PM,326,0.0.0.0
+File75=@gf.ico,$(AppPath),,,10/17/07 6:17:24 PM,894,0.0.0.0
+File76=@DeleteFormDisabled.ico,$(AppPath),,,5/12/09 10:08:44 AM,26694,0.0.0.0
+File77=@DeleteForm.ico,$(AppPath),,,5/11/09 2:23:10 PM,26694,0.0.0.0
+File78=@Critical.jpg,$(AppPath),,,5/1/09 6:06:02 PM,1092,0.0.0.0
+File79=@conducenti.png,$(AppPath),,,4/26/08 2:15:00 AM,3276,0.0.0.0
+File80=@conducenti.ico,$(AppPath),,,5/16/09 3:27:34 PM,25550,0.0.0.0
+File81=@Classe.ico,$(AppPath),,,5/16/09 3:24:08 PM,25550,0.0.0.0
+File82=@cancel.ico,$(AppPath),,,5/11/09 1:10:36 PM,26694,0.0.0.0
+File83=@autorizzazioni.png,$(AppPath),,,4/27/08 10:51:52 PM,2373,0.0.0.0
+File84=@Autorizzazione.ico,$(AppPath),,,5/14/09 9:38:56 AM,26694,0.0.0.0
+File85=@ArreterSZ.ico,$(AppPath),,,5/14/06 1:41:54 AM,170278,0.0.0.0
+File86=@2rightarrow.ico,$(AppPath),,,5/11/09 1:04:54 PM,26694,0.0.0.0
+File87=@2leftarrow.ico,$(AppPath),,,5/11/09 1:06:34 PM,26694,0.0.0.0
+File88=@window_fullscreen.png,$(AppPath),,,5/11/09 2:20:08 PM,605,0.0.0.0
+File89=@IsolaEcologica.mdb,$(AppPath),,,8/30/19 4:37:53 PM,84348928,0.0.0.0
+File90=@Search2.ico,$(AppPath),,,8/17/07 9:39:40 AM,1886,0.0.0.0
+File91=@NotConnect.gif,$(AppPath),,,8/3/07 10:29:58 AM,740,0.0.0.0
+File92=@MaskAI.ico,$(AppPath),,,5/2/09 10:56:30 AM,25214,0.0.0.0
+File93=@Connect.gif,$(AppPath),,,8/3/07 10:32:34 AM,812,0.0.0.0
+File94=@Stockage.ico,$(AppPath),,,3/12/09 1:07:42 PM,431726,0.0.0.0
+File95=@config.ini,$(AppPath),,,5/31/09 10:20:36 AM,101,0.0.0.0
+File96=@MDAC_TYP.EXE,$(AppPath),,,6/26/98 1:00:00 AM,8124720,4.71.1015.0
+File97=@MSCOMCTL.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),12/8/15 4:57:32 AM,1070232,6.1.98.46
+File98=@MSINET.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),6/24/98 1:00:00 AM,115016,6.0.81.69
+File99=@PlexaNetKProj1.ocx,$(WinSysPath),$(DLLSelfRegister),$(Shared),4/26/11 12:52:22 PM,643584,1.5.3.193
+File100=@MSSTDFMT.DLL,$(WinSysPath),$(DLLSelfRegister),$(Shared),6/18/98 1:00:00 AM,118784,6.0.81.69
+File101=@MSBIND.DLL,$(WinSysPath),$(DLLSelfRegister),$(Shared),6/18/98 1:00:00 AM,77824,6.0.81.69
+File102=@MSDATREP.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),6/24/98 1:00:00 AM,187712,6.0.81.69
+File103=@MSDATLST.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),6/24/98 1:00:00 AM,232248,6.0.81.69
+File104=@MSCHRT20.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),6/26/98 1:00:00 AM,1008432,6.0.81.77
+File105=@MSADODC.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),6/24/98 1:00:00 AM,118064,6.0.81.71
+File106=@MSDATGRD.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),6/24/98 1:00:00 AM,260920,6.0.81.69
+File107=@MSCOMCT2.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),6/26/98 1:00:00 AM,644400,6.0.81.77
+File108=@COMCT332.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),6/24/98 1:00:00 AM,369696,6.0.0.8169
+File109=@MSCOMM32.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),6/24/98 1:00:00 AM,103744,6.0.81.69
+File110=@msjro.dll,$(WinSysPath),$(DLLSelfRegister),$(Shared),6/6/12 7:05:40 AM,143360,6.1.7601.17857
+File111=@msvcrt.dll,$(WinSysPathSysFile),,,12/16/11 9:52:58 AM,690688,7.0.7601.17744
+File112=@scrrun.dll,$(WinSysPath),$(DLLSelfRegister),$(Shared),10/27/18 5:27:24 AM,164352,5.8.7601.24288
+File113=@MSDBRPTR.DLL,$(WinSysPath),$(DLLSelfRegister),$(Shared),6/18/98 1:00:00 AM,299008,6.0.81.69
+File114=@MSDERUN.DLL,$(CommonFiles)\designer,$(DLLSelfRegister),$(Shared),6/9/98 1:00:00 AM,137216,6.0.0.3005
+File115=@msado26.tlb,$(WinSysPath),,$(Shared),6/6/12 5:51:46 AM,73728,6.1.7601.17857
+File116=@comctl32.dll,$(WinSysPath),,$(Shared),9/16/15 11:41:31 AM,530432,5.82.7601.18837
+File117=@IsolaEcologica.exe,$(AppPath),,,8/30/19 3:11:53 PM,4706304,2.0.0.1
+
+; The following lines may be deleted in order to obtain extra 
+; space for customizing this file on a full installation diskette.
+; 
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

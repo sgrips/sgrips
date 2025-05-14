@@ -1,0 +1,43 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="PathDataBase" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TimeEndSync" Type="System.String" Scope="User">
+      <Value Profile="(Default)">23:59:59</Value>
+    </Setting>
+    <Setting Name="FolderNameSync" Type="System.String" Scope="User">
+      <Value Profile="(Default)">|CommonApplicationData|</Value>
+    </Setting>
+    <Setting Name="PasswordDB" Type="System.String" Scope="User">
+      <Value Profile="(Default)">YrNeflvClG1R2V7yNHZLjAAydvKFAMWuol8QqmbGTHc=</Value>
+    </Setting>
+    <Setting Name="TimeStartSync" Type="System.String" Scope="User">
+      <Value Profile="(Default)">06:00:00</Value>
+    </Setting>
+    <Setting Name="ClientID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="ServerURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="OleDBMSAccess" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Z:\Sviluppi\SviluppiStudio60\GFA\IsolaEcologica.mdb&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Z:\Sviluppi\SviluppiStudio60\GFA\IsolaEcologica.mdb</Value>
+    </Setting>
+    <Setting Name="FileNamePattern" Type="System.String" Scope="User">
+      <Value Profile="(Default)">*.sync</Value>
+    </Setting>
+    <Setting Name="ConnectionMode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="SharedFolderName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SyncDB</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

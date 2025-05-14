@@ -1,0 +1,18 @@
+[Version]
+Version=2.0.0.0
+
+[activelock1884.ocx <0010>]
+Dest=$(AppPath)
+Date=07/11/2009
+Time=09.37
+Version=2.0.0.0
+CABFilename=activelock1884.CAB
+CABINFFile=activelock1884.INF
+Uses1=msvbvm60.dll
+Uses2=OLEAUT32.DLL
+Uses3=OLEPRO32.DLL
+Uses4=ASYCFILT.DLL
+Uses5=STDOLE2.TLB
+Uses6=COMCAT.DLL
+Uses7=VB6IT.DLL
+Uses8=MSSTKPRP.DLL

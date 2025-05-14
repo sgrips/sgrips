@@ -1,0 +1,7 @@
+XLODBC
+1
+DSN=Simulazione;DBQ=Y:\sviluppi\GFAmbienteEuro\StudioAmbiente2002.mdb;DriverId=25;FIL=MS Access;MaxBufferSize=2048;PageTimeout=5;UID=admin;
+SELECT ValoriCoefficientiIQSCAComunali.AnnoRiferimento, ValoriCoefficientiIQSCAComunali.CodAttivita, CategorieAttivita.Descrizione AS 'DescrizioneReale', CategorieAttivitaComunali.Descrizione, ValoriCoefficientiIQSCAComunali.CodComune, ValoriCoefficientiIQSCAComunali.IPS, ValoriCoefficientiIQSCAComunali.IPSCalc, ValoriCoefficientiIQSCAComunali.IQS, ValoriCoefficientiIQSCAComunali.flgSimulazione  FROM `Y:\sviluppi\GFAmbienteEuro\StudioAmbiente2002`.CategorieAttivita CategorieAttivita, `Y:\sviluppi\GFAmbienteEuro\StudioAmbiente2002`.CategorieAttivitaComunali CategorieAttivitaComunali, `Y:\sviluppi\GFAmbienteEuro\StudioAmbiente2002`.ValoriCoefficientiIQSCAComunali ValoriCoefficientiIQSCAComunali  WHERE ValoriCoefficientiIQSCAComunali.AnnoRiferimento = CategorieAttivitaComunali.AnnoRiferimento AND ValoriCoefficientiIQSCAComunali.CodComune = CategorieAttivitaComunali.CodComune AND CategorieAttivita.CodAttivita = CategorieAttivitaComunali.IdCategoriaAttivita AND CategorieAttivitaComunali.IdCategoriaAttivita = ValoriCoefficientiIQSCAComunali.CodAttivita AND ((ValoriCoefficientiIQSCAComunali.AnnoRiferimento=?) AND (ValoriCoefficientiIQSCAComunali.CodComune=?))
+@AnnoRiferimento	@CodComune
+12	12
+AnnoRiferimento	CodAttivita	DescrizioneReale	Descrizione	CodComune	IPS	IPSCalc	IQS	flgSimulazione

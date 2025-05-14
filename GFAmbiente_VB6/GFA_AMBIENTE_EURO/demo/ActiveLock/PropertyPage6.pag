@@ -1,0 +1,69 @@
+VERSION 5.00
+Begin VB.PropertyPage PropertyPage6 
+   Caption         =   "DataLock"
+   ClientHeight    =   3495
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   5925
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   3495
+   ScaleWidth      =   5925
+   Begin VB.CheckBox chkUseDataLock 
+      Caption         =   "UseDataLock"
+      Height          =   285
+      Left            =   720
+      TabIndex        =   0
+      Top             =   1680
+      Width           =   1380
+   End
+   Begin VB.Label lblTip 
+      Caption         =   "Tip: to learn more and get software protection updates, visit LockX.com web site!"
+      Height          =   735
+      Left            =   720
+      TabIndex        =   3
+      Top             =   2520
+      Width           =   4815
+   End
+   Begin VB.Label Label2 
+      Caption         =   $"PropertyPage6.pgx":0000
+      Height          =   495
+      Left            =   120
+      TabIndex        =   2
+      Top             =   600
+      Width           =   5535
+   End
+   Begin VB.Label Label1 
+      Caption         =   "LockX.com and ActiveLock have teamed up to improve ActiveLock security, through DataLock."
+      Height          =   495
+      Left            =   120
+      TabIndex        =   1
+      Top             =   120
+      Width           =   5535
+   End
+   Begin VB.Image Image1 
+      Height          =   480
+      Left            =   120
+      Picture         =   "PropertyPage6.pgx":0089
+      Top             =   2520
+      Width           =   480
+   End
+End
+Attribute VB_Name = "PropertyPage6"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Private Sub chkUseDataLock_Click()
+    Changed = True
+End Sub
+
+Private Sub PropertyPage_ApplyChanges()
+    SelectedControls(0).UseDataLock = (chkUseDataLock.Value = vbChecked)
+End Sub
+
+
+Private Sub PropertyPage_SelectionChanged()
+    chkUseDataLock.Value = (SelectedControls(0).UseDataLock And vbChecked)
+End Sub
+
+

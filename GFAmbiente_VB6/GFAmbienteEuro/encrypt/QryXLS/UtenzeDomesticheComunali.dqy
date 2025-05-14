@@ -1,0 +1,7 @@
+XLODBC
+1
+DSN=Database di Microsoft Access;DBQ=C:\Documents and Settings\Antonio&Sara\Documenti\Sviluppi\GFAmbienteEuro\StudioAmbiente2002.mdb;DefaultDir=C:\Documents and Settings\Antonio&Sara\Documenti\Sviluppi\GFAmbienteEuro;DriverId=25;FIL=MS Access;MaxBufferSize=2048;PageTimeout=5;UID=admin;
+SELECT UtenzeDomesticheComunali.CodComune, UtenzeDomesticheComunali.IdNumeriComponenti, UtenzeDomesticheComunali.AnnoRiferimento, UtenzeDomesticheComunali.TariffaNComp, UtenzeDomesticheComunali.TariffaSuperficie, UtenzeDomesticheComunali.NumeroUtenze, UtenzeDomesticheComunali.Superficie, UtenzeDomesticheComunali.SuperficieM, UtenzeDomesticheComunali.flgSimulazione  FROM UtenzeDomesticheComunali UtenzeDomesticheComunali  WHERE (UtenzeDomesticheComunali.AnnoRiferimento=?) AND (UtenzeDomesticheComunali.CodComune=?)
+@AnnoRiferimento	@CodComune
+12	12
+CodComune	IdNumeriComponenti	AnnoRiferimento	TariffaNComp	TariffaSuperficie	NumeroUtenze	Superficie	SuperficieM	flgSimulazione

@@ -1,0 +1,7 @@
+XLODBC
+1
+DSN=Database di Microsoft Access;DBQ=C:\Sviluppi\GFAmbienteEuro\StudioAmbiente2002.mdb;DefaultDir=C:\Sviluppi\GFAmbienteEuro;DriverId=25;FIL=MS Access;MaxBufferSize=2048;PageTimeout=5;UID=admin;
+SELECT ValoriCoefficienti507UDComunali.AnnoRiferimento, ValoriCoefficienti507UDComunali.CodComune, ValoriCoefficienti507UDComunali.CodUtenza, NumeroComponentiFamiglia.Descrizione, ValoriCoefficienti507UDComunali.flgSimulazione, ValoriCoefficienti507UDComunali.Valore, ValoriCoefficienti507UDComunali.ValoreCalc  FROM `C:\Sviluppi\GFAmbienteEuro\StudioAmbiente2002`.NumeroComponentiFamiglia NumeroComponentiFamiglia, `C:\Sviluppi\GFAmbienteEuro\StudioAmbiente2002`.ValoriCoefficienti507UDComunali ValoriCoefficienti507UDComunali  WHERE NumeroComponentiFamiglia.NumeroComponenti = ValoriCoefficienti507UDComunali.CodUtenza AND ((ValoriCoefficienti507UDComunali.AnnoRiferimento=?) AND (ValoriCoefficienti507UDComunali.CodComune=?))
+@AnnoRiferimento	@CodComune
+12	12
+AnnoRiferimento	CodComune	CodUtenza	Descrizione	flgSimulazione	Valore	ValoreCalc

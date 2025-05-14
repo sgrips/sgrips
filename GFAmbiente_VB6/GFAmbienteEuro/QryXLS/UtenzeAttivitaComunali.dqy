@@ -1,0 +1,7 @@
+XLODBC
+1
+DSN=Database di Microsoft Access;DBQ=C:\Documents and Settings\Antonio&Sara\Documenti\Sviluppi\GFAmbienteEuro\StudioAmbiente2002.mdb;DefaultDir=C:\Documents and Settings\Antonio&Sara\Documenti\Sviluppi\GFAmbienteEuro;DriverId=25;FIL=MS Access;MaxBufferSize=2048;PageTimeout=5;UID=admin;
+SELECT CategorieAttivitaComunali.IdCategoriaAttivita, CategorieAttivitaComunali.Descrizione, CategorieAttivitaComunali.NumRuoli, CategorieAttivitaComunali.Superficie, CategorieAttivitaComunali.Tariffa, CategorieAttivitaComunali.TariffaPF, CategorieAttivitaComunali.TariffaPV  FROM CategorieAttivitaComunali CategorieAttivitaComunali  WHERE (CategorieAttivitaComunali.AnnoRiferimento=?) AND (CategorieAttivitaComunali.CodComune=?)  ORDER BY CategorieAttivitaComunali.IdCategoriaAttivita
+@AnnoRiferimento	@CodComune
+12	12
+IdCategoriaAttivita	Descrizione	NumRuoli	Superficie	Tariffa	TariffaPF	TariffaPV

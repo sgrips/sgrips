@@ -1,0 +1,75 @@
+[Root]
+Most Recent Package=ActiveLock
+
+
+[Package|ActiveLock|Root]
+SubWizProgID=PDWizard.DepPkgSubWiz
+BuildFolder=Z:\Disco B\sviluppi\GFAmbienteEuro\demo\ActiveLock\ocx
+Controls Design-Time Support=Yes
+
+[Package|ActiveLock|Configure DAO ISAMs]
+Applicable=No
+
+[Package|ActiveLock|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|ActiveLock|Files Found]
+
+[Package|ActiveLock|Files Released]
+
+[Package|ActiveLock|Missing Dependency Information]
+
+[Package|ActiveLock|Out-of-Date Dependency Information]
+
+[Package|ActiveLock|Files Added]
+c:\windows\system32\msstkprp.dll=This file is needed for usercontrol design-time support.
+
+[Package|ActiveLock|Files Removed]
+
+[Package|ActiveLock|Files In Project]
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\MSSTKPRP.DLL=Yes
+C:\WINDOWS\system32\VB6IT.DLL=Yes
+C:\WINDOWS\system32\MSPRPIT.DLL=Yes
+Y:\Disco B\sviluppi\GFAmbienteEuro\demo\ActiveLock\ocx\activelock1884.ocx=Yes
+
+[Package|ActiveLock|Configure Registry Files]
+Applicable=
+
+[Package|ActiveLock|Configure Remote Servers]
+Applicable=
+
+[Package|ActiveLock|Install Locations]
+Z:\GFAmbienteEuro\demo\ActiveLock\ocx\activelock1884.ocx=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\MSSTKPRP.DLL=$(WinSysPath)
+\\Server2003\INTRANET\Disco B\sviluppi\GFAmbienteEuro\demo\ActiveLock\ocx\activelock1884.ocx=$(AppPath)
+C:\WINDOWS\system32\VB6IT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSPRPIT.DLL=$(WinSysPath)
+Y:\Disco B\sviluppi\GFAmbienteEuro\demo\ActiveLock\ocx\activelock1884.ocx=$(AppPath)
+
+[Package|ActiveLock|Configure Shared Files]
+Applicable=
+
+[Package|ActiveLock|DepFile]
+DepCabFile=activelock1884.CAB
+DepCabRun=activelock1884.INF
+
+[Package|ActiveLock|Package]
+PackageFolder=Z:\Disco B\sviluppi\GFAmbienteEuro\demo\ActiveLock\ocx
+ProjectFolder=Y:\Disco B\sviluppi\GFAmbienteEuro\demo\ActiveLock
+ServerSideCab=
+File1=Z:\Disco B\sviluppi\GFAmbienteEuro\demo\ActiveLock\ocx\activelock1884.DEP
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

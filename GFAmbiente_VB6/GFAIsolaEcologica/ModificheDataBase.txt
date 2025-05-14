@@ -1,0 +1,27 @@
+16-01-2009 LastAlert di tipo Data/ora con valore default 2007-01-01 nella tabella Storico 
+20-01-2009 Anno di tipo Numerico  nella tabella Contatori
+
+10-03-2009 modificato CodBadge varchar(20) in tabella badge
+10-03-2009 aggiunto campo nomeImmagine varchar(30) in tabella codiciCer
+10-03-2009 aggiunto campo Modello varchar(30) in tabella Pese
+10-03-2009 aggiunto campo RifMovImportato varchar(30) in tabella Movimenti (indice sul campo univoco)
+22-03-2009 aggiunto campo Logo varchar(30) in tabella Societa 
+22-03-2009 aggiunto campo CapSociale Intero lungo  in tabella Societa 
+22-03-2009 aggiunto campo Email varchar(100) in tabella Societa 
+22-03-2009 aggiunto campo Logo varchar(30) in tabella Comuni
+26-03-2009 aggiunto campo flgBonusAPunti si/no in tabella CodiciCer
+26-03-2009 aggiunto campo BonusPunti Intero in tabella CodiciCer
+26-03-2009 aggiunto campo BonusPunti Intero in tabella CodiciCer
+26-03-2009 aggiunto campo flgIngombrante si/no in tabella CodiciCer 
+
+
+
+
+
+16-04-2009 aggiunto campo RifDocumento Intero in tabella movimenti
+16-04-2009 aggiunto tabella Documenti
+		id		Contatore
+		nrDocument	Numerico
+		typeDocument	Testo
+		dateDocument	Data/ora
+		reference	varchar(255)

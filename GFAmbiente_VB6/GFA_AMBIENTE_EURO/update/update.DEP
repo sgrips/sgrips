@@ -1,0 +1,19 @@
+[Version]
+Version=1.0.0.0
+
+[update.exe <0009>]
+Dest=$(AppPath)
+Date=14/10/2005
+Time=20.54
+Version=1.0.0.0
+CABFilename=update.CAB
+CABINFFile=update.INF
+Uses1=msvbvm60.dll
+Uses2=OLEAUT32.DLL
+Uses3=OLEPRO32.DLL
+Uses4=ASYCFILT.DLL
+Uses5=STDOLE2.TLB
+Uses6=COMCAT.DLL
+Uses7=msado27.tlb
+Uses8=msadox.dll
+Uses9=MSCOMCTL.OCX

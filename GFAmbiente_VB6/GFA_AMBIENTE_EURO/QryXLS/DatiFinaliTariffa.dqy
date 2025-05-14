@@ -1,0 +1,7 @@
+XLODBC
+1
+DSN=Database di Microsoft Access;DBQ=\\192.168.1.201\public\Disco B\sviluppi\GFAmbienteEuro\StudioAmbiente2002.mdb;DriverId=25;FIL=MS Access;MaxBufferSize=2048;PageTimeout=5;UID=admin;
+SELECT DatiFinaliCalcoloTariffa.CodComune, DatiFinaliCalcoloTariffa.AnnoRiferimento, DatiFinaliCalcoloTariffa.QVDOM, DatiFinaliCalcoloTariffa.QFDOM, DatiFinaliCalcoloTariffa.QUVDOM, DatiFinaliCalcoloTariffa.QUFDOM, DatiFinaliCalcoloTariffa.CUDOM, DatiFinaliCalcoloTariffa.QVNDOM, DatiFinaliCalcoloTariffa.QFNDOM, DatiFinaliCalcoloTariffa.CUNDOM, DatiFinaliCalcoloTariffa.QAPFNDOM, DatiFinaliCalcoloTariffa.flgSimulazione  FROM DatiFinaliCalcoloTariffa DatiFinaliCalcoloTariffa  WHERE (DatiFinaliCalcoloTariffa.AnnoRiferimento=?) AND (DatiFinaliCalcoloTariffa.CodComune=?) AND (DatiFinaliCalcoloTariffa.CodTipoTariffa=?)
+@AnnoRiferimento	@CodComune	@CodTipoTariffa
+12	12	4
+CodComune	AnnoRiferimento	QVDOM	QFDOM	QUVDOM	QUFDOM	CUDOM	QVNDOM	QFNDOM	CUNDOM	QAPFNDOM	flgSimulazione

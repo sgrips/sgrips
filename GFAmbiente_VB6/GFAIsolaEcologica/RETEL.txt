@@ -1,0 +1,24 @@
+CGCH1   <<CAMBIO CANALE IN 1
+OK
+CGCH2   <<CAMBIO CANALE IN 2
+OK
+CGCH1
+OK
+REXT    <<LETTURA STRINGA ESTESA
+1,ST,      1.40,        0.00,         0,kg
+PID     <<SALVA IN ALIBY MEM
+PIDST,1,      1.40kg,        0.00kg,00000-000018
+PID
+PIDST,1,      1.40kg,        0.00kg,00000-000019
+PID
+PIDST,1,      1.40kg,        0.00kg,00000-000020
+PID
+PIDST,1,      1.40kg,        0.00kg,00000-000021
+
+ZERO    <<TARA
+OK
+
+
+
+
+dopo tutti i comandi io metto un "\r\n"

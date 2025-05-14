@@ -1,0 +1,1382 @@
+  [OptimisticLocking(false)]
+    public class TotalForBadge : XPObject 
+    {
+
+        private string _CodBadge;
+        public string CodBadge
+        {
+            get
+            {
+                return _CodBadge;
+            }
+            set
+            {
+                if (_CodBadge != value)
+                {
+                    string oldValue = _CodBadge;
+                    _CodBadge = value;
+                    OnChanged("CodBadge", oldValue, _CodBadge);
+                }
+            }
+        }
+
+        private string _CodUtente;
+        public string CodUtente
+        {
+            get
+            {
+                return _CodUtente;
+            }
+            set
+            {
+                if (_CodUtente != value)
+                {
+                    string oldValue = _CodUtente;
+                    _CodUtente = value;
+                    OnChanged("CodUtente", oldValue, _CodUtente);
+                }
+            }
+        }
+
+        private CodiciCer _CodiciCer;
+        public CodiciCer CodiciCer
+        {
+            get
+            {
+                return _CodiciCer;
+            }
+            set
+            {
+                if (_CodiciCer != value)
+                {
+                    CodiciCer oldValue = _CodiciCer;
+                    _CodiciCer = value;
+                    OnChanged("CodiciCer", oldValue, _CodiciCer);
+                }
+            }
+        }
+
+        //   private string _DescrizioneCer;
+        public string DescrizioneCer
+        {
+            get
+            {
+                return CodiciCer.Descrizione;
+            }
+            //set
+            //{
+            //    if (_DescrizioneCer != value)
+            //    {
+            //        string oldValue = _DescrizioneCer;
+            //        _DescrizioneCer = value;
+            //        OnChanged("DescrizioneCer", oldValue, _DescrizioneCer);
+            //    }
+            //}
+        }
+
+        private string _UnitaDiMisura;
+        public string UnitaDiMisura
+        {
+            get
+            {
+                return _UnitaDiMisura;
+            }
+            set
+            {
+                if (_UnitaDiMisura != value)
+                {
+                    string oldValue = _UnitaDiMisura;
+                    _UnitaDiMisura = value;
+                    OnChanged("UnitaDiMisura", oldValue, _UnitaDiMisura);
+                }
+            }
+        }
+
+        private decimal _SomQty;
+        public decimal SomQty
+        {
+            get
+            {
+                return _SomQty;
+            }
+            set
+            {
+                if (_SomQty != value)
+                {
+                    decimal oldValue = _SomQty;
+                    _SomQty = value;
+                    OnChanged("SomQty", oldValue, _SomQty);
+                }
+            }
+        }
+
+        public TotalForBadge(Session session) : base(session) { }
+        public override void AfterConstruction() { base.AfterConstruction(); }
+    }
+    [OptimisticLocking(false)]
+    public class CodiciCer : XPBaseObject
+    {
+        //string fCodCategoria;
+        //[Size(2)]
+        //public string CodCategoria
+        //{
+        //    get { return fCodCategoria; }
+        //    set { SetPropertyValue<string>("CodCategoria", ref fCodCategoria, value); }
+        //}
+        //string fCodSottoCategoria;
+        //[Size(2)]
+        //public string CodSottoCategoria
+        //{
+        //    get { return fCodSottoCategoria; }
+        //    set { SetPropertyValue<string>("CodSottoCategoria", ref fCodSottoCategoria, value); }
+        //}
+        //string fCodCer;
+        //[Key]
+        //[Size(2)]
+        //public string CodCer
+        //{
+        //    get { return fCodCer; }
+        //    set { SetPropertyValue<string>("CodCer", ref fCodCer, value); }
+        //}
+
+        private bool _FlgBonusAPunti;
+        public bool flgBonusAPunti
+        {
+            get
+            {
+                return _FlgBonusAPunti;
+            }
+            set
+            {
+                if (_FlgBonusAPunti != value)
+                {
+                    bool oldValue = _FlgBonusAPunti;
+                    _FlgBonusAPunti = value;
+                    OnChanged("flgBonusAPunti", oldValue, _FlgBonusAPunti);
+                }
+            }
+        }
+
+        private int _BonusPunti;
+        public int BonusPunti
+        {
+            get
+            {
+                return _BonusPunti;
+            }
+            set
+            {
+                if (_BonusPunti != value)
+                {
+                    int oldValue = _BonusPunti;
+                    _BonusPunti = value;
+                    OnChanged("BonusPunti", oldValue, _BonusPunti);
+                }
+            }
+        }
+
+        private bool _FlgIngombrante;
+        public bool flgIngombrante
+        {
+            get
+            {
+                return _FlgIngombrante;
+            }
+            set
+            {
+                if (_FlgIngombrante != value)
+                {
+                    bool oldValue = _FlgIngombrante;
+                    _FlgIngombrante = value;
+                    OnChanged("flgIngombrante", oldValue, _FlgIngombrante);
+                }
+            }
+        }
+
+        [Key, Persistent]
+        public CodiceCerKey Oid;
+
+        public override string ToString()
+        {
+            return Oid.CodCategoria + Oid.CodSottoCategoria + Oid.CodCer;
+        }
+
+        public string PlainCode
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+
+        string fDescrizione;
+        [Size(255)]
+        public string Descrizione
+        {
+            get { return fDescrizione; }
+            set { SetPropertyValue<string>("Descrizione", ref fDescrizione, value); }
+        }
+        string fDescrizioneReale;
+        [Size(255)]
+        public string DescrizioneReale
+        {
+            get { return fDescrizioneReale; }
+            set { SetPropertyValue<string>("DescrizioneReale", ref fDescrizioneReale, value); }
+        }
+        bool fRifiutoPericoloso;
+        public bool RifiutoPericoloso
+        {
+            get { return fRifiutoPericoloso; }
+            set { SetPropertyValue<bool>("RifiutoPericoloso", ref fRifiutoPericoloso, value); }
+        }
+        string fUnitaDiMisura;
+        [Size(2)]
+        public string UnitaDiMisura
+        {
+            get { return fUnitaDiMisura; }
+            set { SetPropertyValue<string>("UnitaDiMisura", ref fUnitaDiMisura, value); }
+        }
+        string fcodStatoFisico;
+        [Size(3)]
+        public string codStatoFisico
+        {
+            get { return fcodStatoFisico; }
+            set { SetPropertyValue<string>("codStatoFisico", ref fcodStatoFisico, value); }
+        }
+        bool fFlgAbilitatoInRicerca;
+        public bool FlgAbilitatoInRicerca
+        {
+            get { return fFlgAbilitatoInRicerca; }
+            set { SetPropertyValue<bool>("FlgAbilitatoInRicerca", ref fFlgAbilitatoInRicerca, value); }
+        }
+        bool fFlgAbilitatoFatturazione;
+        public bool FlgAbilitatoFatturazione
+        {
+            get { return fFlgAbilitatoFatturazione; }
+            set { SetPropertyValue<bool>("FlgAbilitatoFatturazione", ref fFlgAbilitatoFatturazione, value); }
+        }
+        double fqtyMaxFatturabile;
+        public double qtyMaxFatturabile
+        {
+            get { return fqtyMaxFatturabile; }
+            set { SetPropertyValue<double>("qtyMaxFatturabile", ref fqtyMaxFatturabile, value); }
+        }
+        bool fFlgBonus;
+        public bool FlgBonus
+        {
+            get { return fFlgBonus; }
+            set { SetPropertyValue<bool>("FlgBonus", ref fFlgBonus, value); }
+        }
+        double fCorrispettivoBonus;
+        public double CorrispettivoBonus
+        {
+            get { return fCorrispettivoBonus; }
+            set { SetPropertyValue<double>("CorrispettivoBonus", ref fCorrispettivoBonus, value); }
+        }
+        bool fflgAmmessoPerUD;
+        public bool flgAmmessoPerUD
+        {
+            get { return fflgAmmessoPerUD; }
+            set { SetPropertyValue<bool>("flgAmmessoPerUD", ref fflgAmmessoPerUD, value); }
+        }
+        double fqtyMaxGGUD;
+        public double qtyMaxGGUD
+        {
+            get { return fqtyMaxGGUD; }
+            set { SetPropertyValue<double>("qtyMaxGGUD", ref fqtyMaxGGUD, value); }
+        }
+        double fqtyMaxAAUD;
+        public double qtyMaxAAUD
+        {
+            get { return fqtyMaxAAUD; }
+            set { SetPropertyValue<double>("qtyMaxAAUD", ref fqtyMaxAAUD, value); }
+        }
+        bool fflgAmmessoPerUA;
+        public bool flgAmmessoPerUA
+        {
+            get { return fflgAmmessoPerUA; }
+            set { SetPropertyValue<bool>("flgAmmessoPerUA", ref fflgAmmessoPerUA, value); }
+        }
+        double fqtyMaxGGUA;
+        public double qtyMaxGGUA
+        {
+            get { return fqtyMaxGGUA; }
+            set { SetPropertyValue<double>("qtyMaxGGUA", ref fqtyMaxGGUA, value); }
+        }
+        double fqtyMaxAAUA;
+        public double qtyMaxAAUA
+        {
+            get { return fqtyMaxAAUA; }
+            set { SetPropertyValue<double>("qtyMaxAAUA", ref fqtyMaxAAUA, value); }
+        }
+        double fcostoUnitario;
+        public double costoUnitario
+        {
+            get { return fcostoUnitario; }
+            set { SetPropertyValue<double>("costoUnitario", ref fcostoUnitario, value); }
+        }
+        short fggMassimiGiacenza;
+        public short ggMassimiGiacenza
+        {
+            get { return fggMassimiGiacenza; }
+            set { SetPropertyValue<short>("ggMassimiGiacenza", ref fggMassimiGiacenza, value); }
+        }
+        double fqtyMassimaGiacenza;
+        public double qtyMassimaGiacenza
+        {
+            get { return fqtyMassimaGiacenza; }
+            set { SetPropertyValue<double>("qtyMassimaGiacenza", ref fqtyMassimaGiacenza, value); }
+        }
+        short fggMassimiGiacenzaNormativa;
+        public short ggMassimiGiacenzaNormativa
+        {
+            get { return fggMassimiGiacenzaNormativa; }
+            set { SetPropertyValue<short>("ggMassimiGiacenzaNormativa", ref fggMassimiGiacenzaNormativa, value); }
+        }
+        double fqtyMassimaGiacenzaNormativa;
+        public double qtyMassimaGiacenzaNormativa
+        {
+            get { return fqtyMassimaGiacenzaNormativa; }
+            set { SetPropertyValue<double>("qtyMassimaGiacenzaNormativa", ref fqtyMassimaGiacenzaNormativa, value); }
+        }
+        public CodiciCer(Session session) : base(session) { }
+        public override void AfterConstruction() { base.AfterConstruction(); }
+    }
+
+    public struct ImmobileKey
+    {
+        [Persistent("CodImmobile")]
+        public int CodImmobile;
+        [Persistent("CodUtente")]
+        public int CodUtente;
+    }
+
+    public class Immobili : XPBaseObject
+    {
+
+        [Key, Persistent]
+        public ImmobileKey Oid;
+
+        public int CodImmobile
+        {
+            get { return Oid.CodImmobile; }
+        }
+
+           public int CodUtente
+        {
+            get { return Oid.CodUtente; }
+        }
+
+        public string Comune
+        {
+            get
+            {
+                try
+                {
+                    return this.Session.FindObject<Comuni>(CriteriaOperator.Parse("[CODISTAT] == ?", this.CodComune)).Comune;
+                }
+                catch
+                {
+                    return "";
+                }
+            }
+        }
+        //int fCodImmobile;
+        //public int CodImmobile
+        //{
+        //    get { return fCodImmobile; }
+        //    set { SetPropertyValue<int>("CodImmobile", ref fCodImmobile, value); }
+        //}
+        //int fCodUtente;
+        //public int CodUtente
+        //{
+        //    get { return fCodUtente; }
+        //    set { SetPropertyValue<int>("CodUtente", ref fCodUtente, value); }
+        //}
+        string fTipo;
+        [Size(1)]
+        public string Tipo
+        {
+            get { return fTipo; }
+            set { SetPropertyValue<string>("Tipo", ref fTipo, value); }
+        }
+        int fCodImmobilePrincipale;
+        public int CodImmobilePrincipale
+        {
+            get { return fCodImmobilePrincipale; }
+            set { SetPropertyValue<int>("CodImmobilePrincipale", ref fCodImmobilePrincipale, value); }
+        }
+        string fCodComune;
+        [Size(6)]
+        public string CodComune
+        {
+            get { return fCodComune; }
+            set { SetPropertyValue<string>("CodComune", ref fCodComune, value); }
+        }
+        int fCodVia;
+        public int CodVia
+        {
+            get { return fCodVia; }
+            set { SetPropertyValue<int>("CodVia", ref fCodVia, value); }
+        }
+        string fIndirizzo;
+        public string Indirizzo
+        {
+            get { return fIndirizzo; }
+            set { SetPropertyValue<string>("Indirizzo", ref fIndirizzo, value); }
+        }
+        int fNumCivico;
+        public int NumCivico
+        {
+            get { return fNumCivico; }
+            set { SetPropertyValue<int>("NumCivico", ref fNumCivico, value); }
+        }
+        string fSubalterno;
+        [Size(4)]
+        public string Subalterno
+        {
+            get { return fSubalterno; }
+            set { SetPropertyValue<string>("Subalterno", ref fSubalterno, value); }
+        }
+        string fNumInterno;
+        [Size(4)]
+        public string NumInterno
+        {
+            get { return fNumInterno; }
+            set { SetPropertyValue<string>("NumInterno", ref fNumInterno, value); }
+        }
+        string fScala;
+        [Size(4)]
+        public string Scala
+        {
+            get { return fScala; }
+            set { SetPropertyValue<string>("Scala", ref fScala, value); }
+        }
+        string fPiano;
+        [Size(4)]
+        public string Piano
+        {
+            get { return fPiano; }
+            set { SetPropertyValue<string>("Piano", ref fPiano, value); }
+        }
+        decimal fSuperficie;
+        public decimal Superficie
+        {
+            get { return fSuperficie; }
+            set { SetPropertyValue<decimal>("Superficie", ref fSuperficie, value); }
+        }
+        short fNucleoFamiliare;
+        public short NucleoFamiliare
+        {
+            get { return fNucleoFamiliare; }
+            set { SetPropertyValue<short>("NucleoFamiliare", ref fNucleoFamiliare, value); }
+        }
+        string fCodTariffa;
+        [Size(5)]
+        public string CodTariffa
+        {
+            get { return fCodTariffa; }
+            set { SetPropertyValue<string>("CodTariffa", ref fCodTariffa, value); }
+        }
+        string fTipoUtenza;
+        [Size(1)]
+        public string TipoUtenza
+        {
+            get { return fTipoUtenza; }
+            set { SetPropertyValue<string>("TipoUtenza", ref fTipoUtenza, value); }
+        }
+        bool fFlgUtenzaDomesticaResidente;
+        public bool FlgUtenzaDomesticaResidente
+        {
+            get { return fFlgUtenzaDomesticaResidente; }
+            set { SetPropertyValue<bool>("FlgUtenzaDomesticaResidente", ref fFlgUtenzaDomesticaResidente, value); }
+        }
+        DateTime fDataInizioValidita;
+        public DateTime DataInizioValidita
+        {
+            get { return fDataInizioValidita; }
+            set { SetPropertyValue<DateTime>("DataInizioValidita", ref fDataInizioValidita, value); }
+        }
+        DateTime fDataFineValidita;
+        public DateTime DataFineValidita
+        {
+            get { return fDataFineValidita; }
+            set { SetPropertyValue<DateTime>("DataFineValidita", ref fDataFineValidita, value); }
+        }
+        public Immobili(Session session) : base(session) { }
+        public override void AfterConstruction() { base.AfterConstruction(); }
+    }
+    [OptimisticLocking(false)]
+    public class Users : XPLiteObject
+    {
+        public string Caption {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        public override string ToString()
+        {
+            return string.Format("{0} ({1})", CodUser != null ? CodUser : "", Livello == 0 ? "Amministratore" : "Utente");
+        }
+
+        string fCodUser;
+        [Key]
+        [Size(10)]
+        public string CodUser
+        {
+            get { return fCodUser; }
+            set { SetPropertyValue<string>("CodUser", ref fCodUser, value); }
+        }
+        string fCognome;
+        [Size(50)]
+        public string Cognome
+        {
+            get { return fCognome; }
+            set { SetPropertyValue<string>("Cognome", ref fCognome, value); }
+        }
+        short fLivello;
+        public short Livello
+        {
+            get { return fLivello; }
+            set { SetPropertyValue<short>("Livello", ref fLivello, value); }
+        }
+        string fNome;
+        [Size(50)]
+        public string Nome
+        {
+            get { return fNome; }
+            set { SetPropertyValue<string>("Nome", ref fNome, value); }
+        }
+        string fPassword;
+        [Size(10)]
+        public string Password
+        {
+            get {
+                return fPassword;
+            }
+            set {
+                SetPropertyValue<string>("Password", ref fPassword, value); }
+        }
+
+        public bool IsAdmin {
+            get
+            {
+                return Livello == 0;
+            }
+        }
+
+        public string CleanPassword
+        {
+            get
+            {
+                return Crittografy.GetTextDecrypt(fPassword);
+            }
+        }
+
+        public Users(Session session) : base(session) { }
+        public Users() : base(Session.DefaultSession) { }
+        public override void AfterConstruction() { base.AfterConstruction(); }
+    }
+    [OptimisticLocking(false)]
+    public class Comuni : XPLiteObject
+    {
+        string fCAP;
+        [Size(6)]
+        public string CAP
+        {
+            get { return fCAP; }
+            set { SetPropertyValue<string>("CAP", ref fCAP, value); }
+        }
+        string fCodBelfiore;
+        [Size(4)]
+        public string CodBelfiore
+        {
+            get { return fCodBelfiore; }
+            set { SetPropertyValue<string>("CodBelfiore", ref fCodBelfiore, value); }
+        }
+        string fCODISTAT;
+        [Key]
+        [Size(6)]
+        public string CODISTAT
+        {
+            get { return fCODISTAT; }
+            set { SetPropertyValue<string>("CODISTAT", ref fCODISTAT, value); }
+        }
+        string fComune;
+        [Size(50)]
+        public string Comune
+        {
+            get { return fComune; }
+            set { SetPropertyValue<string>("Comune", ref fComune, value); }
+        }
+        int fPopolazione;
+        public int Popolazione
+        {
+            get { return fPopolazione; }
+            set { SetPropertyValue<int>("Popolazione", ref fPopolazione, value); }
+        }
+        string fProvincia;
+        [Size(2)]
+        public string Provincia
+        {
+            get { return fProvincia; }
+            set { SetPropertyValue<string>("Provincia", ref fProvincia, value); }
+        }
+
+        private string _Logo;
+        [Size(30)]
+        public string Logo
+        {
+            get
+            {
+                return _Logo;
+            }
+            set
+            {
+                SetPropertyValue<string>("Logo", ref _Logo, value);
+            }
+        }
+        public Comuni(Session session) : base(session) { }
+        public Comuni() : base(Session.DefaultSession) { }
+        public override void AfterConstruction() { base.AfterConstruction(); }
+    }
+    [OptimisticLocking(false)]
+    public class Pese : XPLiteObject
+    {
+        string fcodPesa;
+        [Key]
+        [Size(2)]
+        public string codPesa
+        {
+            get { return fcodPesa; }
+            set { SetPropertyValue<string>("codPesa", ref fcodPesa, value); }
+        }
+        string fDescrizione;
+        [Size(255)]
+        public string Descrizione
+        {
+            get { return fDescrizione; }
+            set { SetPropertyValue<string>("Descrizione", ref fDescrizione, value); }
+        }
+        bool fflgEcopunto;
+        public bool flgEcopunto
+        {
+            get { return fflgEcopunto; }
+            set { SetPropertyValue<bool>("flgEcopunto", ref fflgEcopunto, value); }
+        }
+        public Pese(Session session) : base(session) { }
+        public Pese() : base(Session.DefaultSession) { }
+        public override void AfterConstruction() { base.AfterConstruction(); }
+    }
+
+    public class CategoriaCER : XPLiteObject
+    {
+        string fCodCategoria;
+        [Key]
+        [Size(2)]
+        public string CodCategoria
+        {
+            get { return fCodCategoria; }
+            set { SetPropertyValue<string>("CodCategoria", ref fCodCategoria, value); }
+        }
+        string fDescrizione;
+        [Size(255)]
+        public string Descrizione
+        {
+            get { return fDescrizione; }
+            set { SetPropertyValue<string>("Descrizione", ref fDescrizione, value); }
+        }
+        public CategoriaCER(Session session) : base(session) { }
+        public CategoriaCER() : base(Session.DefaultSession) { }
+        public override void AfterConstruction() { base.AfterConstruction(); }
+    }
+    [OptimisticLocking(false)]
+    public class MovimentiRd : XPObject
+    {
+        private string _CodiceBadge;
+        public string CodiceBadge
+        {
+            get
+            {
+                return _CodiceBadge;
+            }
+            set
+            {
+                if (_CodiceBadge != value)
+                {
+                    string oldValue = _CodiceBadge;
+                    _CodiceBadge = value;
+                    OnChanged("CodiceBadge", oldValue, _CodiceBadge);
+                }
+            }
+        }
+
+        private string _CodiceUtente;
+        public string CodiceUtente
+        {
+            get
+            {
+                return _CodiceUtente;
+            }
+            set
+            {
+                if (_CodiceUtente != value)
+                {
+                    string oldValue = _CodiceUtente;
+                    _CodiceUtente = value;
+                    OnChanged("CodiceUtente", oldValue, _CodiceUtente);
+                }
+            }
+        }
+
+        private CodiciCer _CodiceCer;
+        public CodiciCer CodiceCer
+        {
+            get
+            {
+                return _CodiceCer;
+            }
+            set
+            {
+                if (_CodiceCer != value)
+                {
+                    CodiciCer oldValue = _CodiceCer;
+                    _CodiceCer = value;
+                    OnChanged("CodiceCer", oldValue, _CodiceCer);
+                }
+            }
+        }
+
+        private DateTime _Created;
+        public DateTime Created
+        {
+            get
+            {
+                return _Created;
+            }
+            set
+            {
+                if (_Created != value)
+                {
+                    DateTime oldValue = _Created;
+                    _Created = value;
+                    OnChanged("Created", oldValue, _Created);
+                }
+            }
+        }
+
+        private string _CodImmobile;
+        public string CodImmobile
+        {
+            get
+            {
+                return _CodImmobile;
+            }
+            set
+            {
+                if (_CodImmobile != value)
+                {
+                    string oldValue = _CodImmobile;
+                    _CodImmobile = value;
+                    OnChanged("CodImmobile", oldValue, _CodImmobile);
+                }
+            }
+        }
+
+        private string _CodIstat;
+        public string CodIstat
+        {
+            get
+            {
+                return _CodIstat;
+            }
+            set
+            {
+                if (_CodIstat != value)
+                {
+                    string oldValue = _CodIstat;
+                    _CodIstat = value;
+                    OnChanged("CodIstat", oldValue, _CodIstat);
+                }
+            }
+        }
+
+        private string _CodicePesa;
+        public string CodicePesa
+        {
+            get
+            {
+                return _CodicePesa;
+            }
+            set
+            {
+                if (_CodicePesa != value)
+                {
+                    string oldValue = _CodicePesa;
+                    _CodicePesa = value;
+                    OnChanged("CodicePesa", oldValue, _CodicePesa);
+                }
+            }
+        }
+
+        private string _CodImpianto;
+        public string CodImpianto
+        {
+            get
+            {
+                return _CodImpianto;
+            }
+            set
+            {
+                if (_CodImpianto != value)
+                {
+                    string oldValue = _CodImpianto;
+                    _CodImpianto = value;
+                    OnChanged("CodImpianto", oldValue, _CodImpianto);
+                }
+            }
+        }
+
+        private decimal _Quantita;
+        public decimal Quantita
+        {
+            get
+            {
+                return _Quantita;
+            }
+            set
+            {
+                if (_Quantita != value)
+                {
+                    decimal oldValue = _Quantita;
+                    _Quantita = value;
+                    OnChanged("Quantita", oldValue, _Quantita);
+                }
+            }
+        }
+
+        private string _Azienda;
+        public string Azienda
+        {
+            get
+            {
+                return _Azienda;
+            }
+            set
+            {
+                if (_Azienda != value)
+                {
+                    string oldValue = _Azienda;
+                    _Azienda = value;
+                    OnChanged("Azienda", oldValue, _Azienda);
+                }
+            }
+        }
+
+        private string _UnitaDiMisura;
+        public string UnitaDiMisura
+        {
+            get
+            {
+                return _UnitaDiMisura;
+            }
+            set
+            {
+                if (_UnitaDiMisura != value)
+                {
+                    string oldValue = _UnitaDiMisura;
+                    _UnitaDiMisura = value;
+                    OnChanged("UnitaDiMisura", oldValue, _UnitaDiMisura);
+                }
+            }
+        }
+
+        public string Pesa
+        {
+            get
+            {
+                try
+                {
+                    return this.Session.FindObject<Pese>(CriteriaOperator.Parse("[codPesa] == ?", this.CodicePesa)).Descrizione;
+                }
+                catch
+                {
+                    return "";
+                }
+            }
+
+        }
+
+        public string Comune
+        {
+            get
+            {
+                try
+                {
+
+                    return this.Session.FindObject<Comuni>(CriteriaOperator.Parse("[CODISTAT] == ?", this.CodIstat)).Comune;
+                }
+                catch
+                {
+                    return "";
+                }
+            }
+
+        }
+
+        private bool _IsExported;
+        public bool IsExported
+        {
+            get
+            {
+                return _IsExported;
+            }
+            set
+            {
+                if (_IsExported != value)
+                {
+                    bool oldValue = _IsExported;
+                    _IsExported = value;
+                    OnChanged("IsExported", oldValue, _IsExported);
+                }
+            }
+        }
+
+        public MovimentiRd(Session session) : base(session) { }
+        public MovimentiRd() : base(Session.DefaultSession) { }
+        public override void AfterConstruction()
+        {
+
+            base.AfterConstruction();
+
+            this.Created = DateTime.Now;
+            this.IsExported = false;
+        }
+
+    }
+
+    [OptimisticLocking(false)]
+    public class Badge : XPLiteObject
+    {
+
+        string fCodBadge;
+        [Size(13)]
+        public string CodBadge
+        {
+            get { return fCodBadge; }
+            set { SetPropertyValue<string>("CodBadge", ref fCodBadge, value); }
+        }
+        string fCodComune;
+        [Size(6)]
+        public string CodComune
+        {
+            get { return fCodComune; }
+            set { SetPropertyValue<string>("CodComune", ref fCodComune, value); }
+        }
+        int fCodImmobile;
+        public int CodImmobile
+        {
+            get { return fCodImmobile; }
+            set { SetPropertyValue<int>("CodImmobile", ref fCodImmobile, value); }
+        }
+        int fCodUtente;
+        public int CodUtente
+        {
+            get { return fCodUtente; }
+            set { SetPropertyValue<int>("CodUtente", ref fCodUtente, value); }
+        }
+        DateTime fDataBadgeFine;
+        public DateTime DataBadgeFine
+        {
+            get { return fDataBadgeFine; }
+            set { SetPropertyValue<DateTime>("DataBadgeFine", ref fDataBadgeFine, value); }
+        }
+        DateTime fDataBadgeInizio;
+        public DateTime DataBadgeInizio
+        {
+            get { return fDataBadgeInizio; }
+            set { SetPropertyValue<DateTime>("DataBadgeInizio", ref fDataBadgeInizio, value); }
+        }
+        bool f_default;
+        [Persistent("default")]
+        public bool _default
+        {
+            get { return f_default; }
+            set { SetPropertyValue<bool>("_default", ref f_default, value); }
+        }
+        int fID;
+        [Key(true)]
+        public int ID
+        {
+            get { return fID; }
+            set { SetPropertyValue<int>("ID", ref fID, value); }
+        }
+        int fProgressivoBadge;
+        public int ProgressivoBadge
+        {
+            get { return fProgressivoBadge; }
+            set { SetPropertyValue<int>("ProgressivoBadge", ref fProgressivoBadge, value); }
+        }
+        string fTipoAnagrafe;
+        [Size(1)]
+        public string TipoAnagrafe
+        {
+            get { return fTipoAnagrafe; }
+            set { SetPropertyValue<string>("TipoAnagrafe", ref fTipoAnagrafe, value); }
+        }
+        string fTipoUtenza;
+        [Size(1)]
+        public string TipoUtenza
+        {
+            get { return fTipoUtenza; }
+            set { SetPropertyValue<string>("TipoUtenza", ref fTipoUtenza, value); }
+        }
+        public Badge(Session session) : base(session) { }
+        public Badge() : base(Session.DefaultSession) { }
+        public override void AfterConstruction() { base.AfterConstruction(); }
+    }
+    [OptimisticLocking(false)]
+    public class Impianti : XPLiteObject
+    {
+        string fcap;
+        [Size(5)]
+        public string cap
+        {
+            get { return fcap; }
+            set { SetPropertyValue<string>("cap", ref fcap, value); }
+        }
+        string fCodComune;
+        [Size(6)]
+        public string CodComune
+        {
+            get { return fCodComune; }
+            set { SetPropertyValue<string>("CodComune", ref fCodComune, value); }
+        }
+        string fCodFiscale;
+        [Size(16)]
+        public string CodFiscale
+        {
+            get { return fCodFiscale; }
+            set { SetPropertyValue<string>("CodFiscale", ref fCodFiscale, value); }
+        }
+        string fcodSoggetto;
+        [Size(1)]
+        public string codSoggetto
+        {
+            get { return fcodSoggetto; }
+            set { SetPropertyValue<string>("codSoggetto", ref fcodSoggetto, value); }
+        }
+        int fidAutorizzazione;
+        public int idAutorizzazione
+        {
+            get { return fidAutorizzazione; }
+            set { SetPropertyValue<int>("idAutorizzazione", ref fidAutorizzazione, value); }
+        }
+        int fidImpianto;
+        [Key(true)]
+        public int idImpianto
+        {
+            get { return fidImpianto; }
+            set { SetPropertyValue<int>("idImpianto", ref fidImpianto, value); }
+        }
+        int fidSoggetto;
+        public int idSoggetto
+        {
+            get { return fidSoggetto; }
+            set { SetPropertyValue<int>("idSoggetto", ref fidSoggetto, value); }
+        }
+        string fIndirizzo;
+        public string Indirizzo
+        {
+            get { return fIndirizzo; }
+            set { SetPropertyValue<string>("Indirizzo", ref fIndirizzo, value); }
+        }
+        string fInterno;
+        [Size(4)]
+        public string Interno
+        {
+            get { return fInterno; }
+            set { SetPropertyValue<string>("Interno", ref fInterno, value); }
+        }
+        int fNumCivico;
+        public int NumCivico
+        {
+            get { return fNumCivico; }
+            set { SetPropertyValue<int>("NumCivico", ref fNumCivico, value); }
+        }
+        string fNumeroFax;
+        [Size(15)]
+        public string NumeroFax
+        {
+            get { return fNumeroFax; }
+            set { SetPropertyValue<string>("NumeroFax", ref fNumeroFax, value); }
+        }
+        string fNumeroTelefono;
+        [Size(15)]
+        public string NumeroTelefono
+        {
+            get { return fNumeroTelefono; }
+            set { SetPropertyValue<string>("NumeroTelefono", ref fNumeroTelefono, value); }
+        }
+        double fPartitaIva;
+        public double PartitaIva
+        {
+            get { return fPartitaIva; }
+            set { SetPropertyValue<double>("PartitaIva", ref fPartitaIva, value); }
+        }
+        string fRagioneSociale;
+        public string RagioneSociale
+        {
+            get { return fRagioneSociale; }
+            set { SetPropertyValue<string>("RagioneSociale", ref fRagioneSociale, value); }
+        }
+        string fSubalterno;
+        [Size(4)]
+        public string Subalterno
+        {
+            get { return fSubalterno; }
+            set { SetPropertyValue<string>("Subalterno", ref fSubalterno, value); }
+        }
+        public Impianti(Session session) : base(session) { }
+        public Impianti() : base(Session.DefaultSession) { }
+        public override void AfterConstruction() { base.AfterConstruction(); }
+    }
+    [OptimisticLocking(false)]
+    public class Utenti : XPLiteObject
+    {
+
+
+        public string ComuneResidenza
+        {
+            get
+            {
+                try
+                {
+
+                    return this.Session.FindObject<Comuni>(CriteriaOperator.Parse("[CODISTAT] == ?", this.CodiceISTAT)).Comune;
+                }
+                catch
+                {
+                    return "";
+                }
+            }
+
+        }
+
+        int fCodAnagrafe;
+        public int CodAnagrafe
+        {
+            get { return fCodAnagrafe; }
+            set { SetPropertyValue<int>("CodAnagrafe", ref fCodAnagrafe, value); }
+        }
+        string fCodComuneDiNascita;
+        [Size(6)]
+        public string CodComuneDiNascita
+        {
+            get { return fCodComuneDiNascita; }
+            set { SetPropertyValue<string>("CodComuneDiNascita", ref fCodComuneDiNascita, value); }
+        }
+        string fCodComuneRecapito;
+        [Size(6)]
+        public string CodComuneRecapito
+        {
+            get { return fCodComuneRecapito; }
+            set { SetPropertyValue<string>("CodComuneRecapito", ref fCodComuneRecapito, value); }
+        }
+        string fCodComuneResidenza;
+        [Size(6)]
+        public string CodComuneResidenza
+        {
+            get { return fCodComuneResidenza; }
+            set { SetPropertyValue<string>("CodComuneResidenza", ref fCodComuneResidenza, value); }
+        }
+        string fCodFiscale;
+        [Size(16)]
+        public string CodFiscale
+        {
+            get { return fCodFiscale; }
+            set { SetPropertyValue<string>("CodFiscale", ref fCodFiscale, value); }
+        }
+        string fCodiceISTAT;
+        [Size(10)]
+        public string CodiceISTAT
+        {
+            get { return fCodiceISTAT; }
+            set { SetPropertyValue<string>("CodiceISTAT", ref fCodiceISTAT, value); }
+        }
+        int fCodUtente;
+        [Key]
+        public int CodUtente
+        {
+            get { return fCodUtente; }
+            set { SetPropertyValue<int>("CodUtente", ref fCodUtente, value); }
+        }
+        int fCodViaRecapito;
+        public int CodViaRecapito
+        {
+            get { return fCodViaRecapito; }
+            set { SetPropertyValue<int>("CodViaRecapito", ref fCodViaRecapito, value); }
+        }
+        int fCodViaResidenza;
+        public int CodViaResidenza
+        {
+            get { return fCodViaResidenza; }
+            set { SetPropertyValue<int>("CodViaResidenza", ref fCodViaResidenza, value); }
+        }
+        string fCognome;
+        public string Cognome
+        {
+            get { return fCognome; }
+            set { SetPropertyValue<string>("Cognome", ref fCognome, value); }
+        }
+        DateTime fDataDiNascita;
+        public DateTime DataDiNascita
+        {
+            get { return fDataDiNascita; }
+            set { SetPropertyValue<DateTime>("DataDiNascita", ref fDataDiNascita, value); }
+        }
+        string fEnteCreditore;
+        public string EnteCreditore
+        {
+            get { return fEnteCreditore; }
+            set { SetPropertyValue<string>("EnteCreditore", ref fEnteCreditore, value); }
+        }
+        string fIndirizzoRecapito;
+        public string IndirizzoRecapito
+        {
+            get { return fIndirizzoRecapito; }
+            set { SetPropertyValue<string>("IndirizzoRecapito", ref fIndirizzoRecapito, value); }
+        }
+        string fIndirizzoResidenza;
+        public string IndirizzoResidenza
+        {
+            get { return fIndirizzoResidenza; }
+            set { SetPropertyValue<string>("IndirizzoResidenza", ref fIndirizzoResidenza, value); }
+        }
+        string fInternoRecapito;
+        [Size(4)]
+        public string InternoRecapito
+        {
+            get { return fInternoRecapito; }
+            set { SetPropertyValue<string>("InternoRecapito", ref fInternoRecapito, value); }
+        }
+        string fInternoResidenza;
+        [Size(4)]
+        public string InternoResidenza
+        {
+            get { return fInternoResidenza; }
+            set { SetPropertyValue<string>("InternoResidenza", ref fInternoResidenza, value); }
+        }
+        string fNome;
+        public string Nome
+        {
+            get { return fNome; }
+            set { SetPropertyValue<string>("Nome", ref fNome, value); }
+        }
+        string fNominativoRecapito;
+        public string NominativoRecapito
+        {
+            get { return fNominativoRecapito; }
+            set { SetPropertyValue<string>("NominativoRecapito", ref fNominativoRecapito, value); }
+        }
+        int fNumCivicoRecapito;
+        public int NumCivicoRecapito
+        {
+            get { return fNumCivicoRecapito; }
+            set { SetPropertyValue<int>("NumCivicoRecapito", ref fNumCivicoRecapito, value); }
+        }
+        int fNumCivicoResidenza;
+        public int NumCivicoResidenza
+        {
+            get { return fNumCivicoResidenza; }
+            set { SetPropertyValue<int>("NumCivicoResidenza", ref fNumCivicoResidenza, value); }
+        }
+        string fNumeroTelefono;
+        [Size(15)]
+        public string NumeroTelefono
+        {
+            get { return fNumeroTelefono; }
+            set { SetPropertyValue<string>("NumeroTelefono", ref fNumeroTelefono, value); }
+        }
+        double fPartitaIva;
+        public double PartitaIva
+        {
+            get { return fPartitaIva; }
+            set { SetPropertyValue<double>("PartitaIva", ref fPartitaIva, value); }
+        }
+        string fPianoRecapito;
+        [Size(4)]
+        public string PianoRecapito
+        {
+            get { return fPianoRecapito; }
+            set { SetPropertyValue<string>("PianoRecapito", ref fPianoRecapito, value); }
+        }
+        string fPianoResidenza;
+        [Size(4)]
+        public string PianoResidenza
+        {
+            get { return fPianoResidenza; }
+            set { SetPropertyValue<string>("PianoResidenza", ref fPianoResidenza, value); }
+        }
+        string fRagioneSociale;
+        public string RagioneSociale
+        {
+            get { return fRagioneSociale; }
+            set { SetPropertyValue<string>("RagioneSociale", ref fRagioneSociale, value); }
+        }
+        string fScalaRecapito;
+        [Size(4)]
+        public string ScalaRecapito
+        {
+            get { return fScalaRecapito; }
+            set { SetPropertyValue<string>("ScalaRecapito", ref fScalaRecapito, value); }
+        }
+        string fScalaResidenza;
+        [Size(4)]
+        public string ScalaResidenza
+        {
+            get { return fScalaResidenza; }
+            set { SetPropertyValue<string>("ScalaResidenza", ref fScalaResidenza, value); }
+        }
+        string fSesso;
+        [Size(1)]
+        public string Sesso
+        {
+            get { return fSesso; }
+            set { SetPropertyValue<string>("Sesso", ref fSesso, value); }
+        }
+        string fSubalternoRecapito;
+        [Size(4)]
+        public string SubalternoRecapito
+        {
+            get { return fSubalternoRecapito; }
+            set { SetPropertyValue<string>("SubalternoRecapito", ref fSubalternoRecapito, value); }
+        }
+        string fSubalternoResidenza;
+        [Size(4)]
+        public string SubalternoResidenza
+        {
+            get { return fSubalternoResidenza; }
+            set { SetPropertyValue<string>("SubalternoResidenza", ref fSubalternoResidenza, value); }
+        }
+        string fTipoAnagrafe;
+        [Size(1)]
+        public string TipoAnagrafe
+        {
+            get { return fTipoAnagrafe; }
+            set { SetPropertyValue<string>("TipoAnagrafe", ref fTipoAnagrafe, value); }
+        }
+        string fTipoDomicilio;
+        [Size(1)]
+        public string TipoDomicilio
+        {
+            get { return fTipoDomicilio; }
+            set { SetPropertyValue<string>("TipoDomicilio", ref fTipoDomicilio, value); }
+        }
+        public Utenti(Session session) : base(session) { }
+        public Utenti() : base(Session.DefaultSession) { }
+        public override void AfterConstruction() { base.AfterConstruction(); }
+    }

@@ -1,0 +1,72 @@
+[Root]
+Most Recent Package=DepUpdateStudioAmbiente
+
+
+[Package|DepUpdateStudioAmbiente|Root]
+SubWizProgID=PDWizard.DepPkgSubWiz
+BuildFolder=Z:\GFAmbienteEuro\update
+
+[Package|DepUpdateStudioAmbiente|Configure DAO ISAMs]
+Applicable=No
+
+[Package|DepUpdateStudioAmbiente|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|DepUpdateStudioAmbiente|Files Found]
+
+[Package|DepUpdateStudioAmbiente|Files Released]
+
+[Package|DepUpdateStudioAmbiente|Missing Dependency Information]
+
+[Package|DepUpdateStudioAmbiente|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+
+[Package|DepUpdateStudioAmbiente|Files Added]
+
+[Package|DepUpdateStudioAmbiente|Files Removed]
+
+[Package|DepUpdateStudioAmbiente|Files In Project]
+Z:\GFAmbienteEuro\update\update.exe=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Programmi\File comuni\System\ado\msado27.tlb=Yes
+C:\WINDOWS\system32\msadox.dll=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+
+[Package|DepUpdateStudioAmbiente|Configure Registry Files]
+Applicable=
+
+[Package|DepUpdateStudioAmbiente|Configure Remote Servers]
+Applicable=
+
+[Package|DepUpdateStudioAmbiente|Install Locations]
+Z:\GFAmbienteEuro\update\update.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Programmi\File comuni\System\ado\msado27.tlb=$(WinSysPath)
+C:\WINDOWS\system32\msadox.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+
+[Package|DepUpdateStudioAmbiente|Configure Shared Files]
+Applicable=
+
+[Package|DepUpdateStudioAmbiente|DepFile]
+DepCabFile=update.CAB
+DepCabRun=update.INF
+
+[Package|DepUpdateStudioAmbiente|Package]
+PackageFolder=Z:\GFAmbienteEuro\update
+ProjectFolder=Z:\GFAmbienteEuro\update
+ServerSideCab=
+File1=Z:\GFAmbienteEuro\update\update.DEP
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

@@ -1,0 +1,7 @@
+XLODBC
+1
+DSN=Database di Microsoft Access;DBQ=C:\Documents and Settings\Antonio&Sara\Documenti\Sviluppi\GFAmbienteEuro\StudioAmbiente2002.mdb;DefaultDir=C:\Documents and Settings\Antonio&Sara\Documenti\Sviluppi\GFAmbienteEuro;DriverId=25;FIL=MS Access;MaxBufferSize=2048;PageTimeout=5;UID=admin;
+SELECT ValoriCoefficientiCAComunali.CodComune, ValoriCoefficientiCAComunali.AnnoRiferimento, ValoriCoefficientiCAComunali.IdCoefficiente, CoefficientiCategorieAttivita.CodTipologiaAttivita, CoefficientiCategorieAttivita.ParteFissa, ValoriCoefficientiCAComunali.Valore, ValoriCoefficientiCAComunali.flgSimulazione  FROM CoefficientiCategorieAttivita CoefficientiCategorieAttivita, ValoriCoefficientiCAComunali ValoriCoefficientiCAComunali  WHERE ValoriCoefficientiCAComunali.IdCoefficiente = CoefficientiCategorieAttivita.IdCoefficiente AND ((ValoriCoefficientiCAComunali.AnnoRiferimento=?) AND (ValoriCoefficientiCAComunali.CodComune=?))  ORDER BY ValoriCoefficientiCAComunali.IdCoefficiente
+@AnnoRiferimento	@CodComune
+12	12
+CodComune	AnnoRiferimento	IdCoefficiente	CodTipologiaAttivita	ParteFissa	Valore	flgSimulazione

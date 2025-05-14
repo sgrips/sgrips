@@ -1,0 +1,176 @@
+[Root]
+Most Recent Package=File .dep 1
+
+
+[Package|ocx premi|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=F:\Sviluppi\SviluppiStudio60\GFA\PacchettoOCX
+Controls Design-Time Support=Yes
+
+[Package|ocx premi|Configure DAO ISAMs]
+Applicable=No
+
+[Package|ocx premi|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|ocx premi|Files Found]
+
+[Package|ocx premi|Files Released]
+
+[Package|ocx premi|Missing Dependency Information]
+
+[Package|ocx premi|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+
+[Package|ocx premi|Files Added]
+C:\WINDOWS\system32\MsStkPrp.dll=Il file è necessario per il supporto in fase di progettazione dell'oggetto UserControl.
+
+[Package|ocx premi|Files Removed]
+
+[Package|ocx premi|Files In Project]
+F:\Sviluppi\SviluppiStudio60\GFA\ITAmbienteUCPremi.ocx=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\VB6IT.DLL=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\WINDOWS\system32\MSCMCIT.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\WINDOWS\system32\MSSTKPRP.DLL=Yes
+C:\WINDOWS\system32\msprpit.dll=Yes
+
+[Package|ocx premi|Configure Registry Files]
+Applicable=No
+
+[Package|ocx premi|Configure Remote Servers]
+Applicable=No
+
+[Package|ocx premi|Install Locations]
+F:\Sviluppi\SviluppiStudio60\GFA\ITAmbienteUCPremi.ocx=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\VB6IT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSCMCIT.DLL=$(WinSysPath)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\WINDOWS\system32\MSSTKPRP.DLL=$(WinSysPath)
+C:\WINDOWS\system32\msprpit.dll=$(WinSysPath)
+
+[Package|ocx premi|Configure Shared Files]
+Applicable=Yes
+F:\Sviluppi\SviluppiStudio60\GFA\ITAmbienteUCPremi.ocx=No
+
+[Package|ocx premi|Distribution]
+Type=single
+Size=
+Title=ITAmbiente.UCPremi
+
+[Package|ocx premi|Package]
+PackageFolder=F:\Sviluppi\SviluppiStudio60\GFA\PacchettoOCX
+ProjectFolder=F:\Sviluppi\SviluppiStudio60\GFA
+ServerSideCab=
+File1=F:\Sviluppi\SviluppiStudio60\GFA\PacchettoOCX\setup.exe
+File2=F:\Sviluppi\SviluppiStudio60\GFA\PacchettoOCX\Setup.Lst
+File3=F:\Sviluppi\SviluppiStudio60\GFA\PacchettoOCX\ITAmbienteUCPremi.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|File .dep 1|Root]
+SubWizProgID=PDWizard.DepPkgSubWiz
+BuildFolder=F:\Sviluppi\SviluppiStudio60\GFA\PacchettoOCX
+Controls Design-Time Support=Yes
+
+[Package|File .dep 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|File .dep 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|File .dep 1|Files Found]
+
+[Package|File .dep 1|Files Released]
+
+[Package|File .dep 1|Missing Dependency Information]
+
+[Package|File .dep 1|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+
+[Package|File .dep 1|Files Added]
+c:\windows\system32\msstkprp.dll=Il file è necessario per il supporto in fase di progettazione dell'oggetto UserControl.
+
+[Package|File .dep 1|Files Removed]
+
+[Package|File .dep 1|Files In Project]
+F:\Sviluppi\SviluppiStudio60\GFA\ITAmbienteUCPremi.ocx=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\VB6IT.DLL=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\WINDOWS\system32\MSCMCIT.DLL=Yes
+C:\WINDOWS\system32\MSSTKPRP.DLL=Yes
+C:\WINDOWS\system32\msprpit.dll=Yes
+
+[Package|File .dep 1|Configure Registry Files]
+Applicable=No
+
+[Package|File .dep 1|Configure Remote Servers]
+Applicable=No
+
+[Package|File .dep 1|Install Locations]
+F:\Sviluppi\SviluppiStudio60\GFA\ITAmbienteUCPremi.ocx=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\VB6IT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSCMCIT.DLL=$(WinSysPath)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\WINDOWS\system32\MSSTKPRP.DLL=$(WinSysPath)
+C:\WINDOWS\system32\msprpit.dll=$(WinSysPath)
+
+[Package|File .dep 1|Configure Shared Files]
+Applicable=Yes
+F:\Sviluppi\SviluppiStudio60\GFA\ITAmbienteUCPremi.ocx=No
+
+[Package|File .dep 1|Distribution]
+Type=single
+Size=
+Title=ITAmbiente.UCPremi
+
+[Package|File .dep 1|DepFile]
+DepCabFile=ITAmbienteUCPremi.CAB
+DepCabRun=ITAmbienteUCPremi.INF
+
+[Package|File .dep 1|Package]
+PackageFolder=F:\Sviluppi\SviluppiStudio60\GFA\PacchettoOCX
+ProjectFolder=F:\Sviluppi\SviluppiStudio60\GFA
+ServerSideCab=
+File1=F:\Sviluppi\SviluppiStudio60\GFA\PacchettoOCX\ITAmbienteUCPremi.DEP
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

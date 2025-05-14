@@ -1,0 +1,7 @@
+XLODBC
+1
+DSN=Database di Microsoft Access;DBQ=\\192.168.1.201\public\Disco B\sviluppi\GFAmbienteEuro\StudioAmbiente2002.mdb;DriverId=25;FIL=MS Access;MaxBufferSize=2048;PageTimeout=5;UID=admin;
+SELECT SelSimulazioni.AnnoRiferimento, SelSimulazioni.CodComune, SelSimulazioni.CodTipoTariffa, SelSimulazioni.Descrizione, SelSimulazioni.DesSimulazione, SelSimulazioni.idSimulazione  FROM SelSimulazioni SelSimulazioni  WHERE (SelSimulazioni.idSimulazione Is Not Null) AND (SelSimulazioni.AnnoRiferimento=?) AND (SelSimulazioni.CodComune=?) AND (SelSimulazioni.CodTipoTariffa=?)
+@AnnoRiferimento	@CodComune	@CodTipoTariffa
+12	12	4
+AnnoRiferimento	CodComune	CodTipoTariffa	Descrizione	DesSimulazione	idSimulazione

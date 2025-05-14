@@ -1,0 +1,14 @@
+Stringa della bilancia piccola (COM1):
+
+$1508/11/200716:45:55    33    200101       CARTA CARTONE          800099
+
+                                                                        0.50 kg
+    0.00 kg     0.50 kg36
+
+Stringa della Pesa a ponte (COM3)
+
+$1108/11/200716:53:40     3
+                                              0
+
+                                                                      0
+    90 kg        0 kg       90 kg23
