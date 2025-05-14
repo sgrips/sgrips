@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfWishList", "WpfWishList\WpfWishList.csproj", "{2FB9EE26-4E5C-425C-AD89-B96A1E3934C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishListConsole", "WishList\WishListConsole.csproj", "{F5418BB2-A667-4EF0-822E-122CD8EA945C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishListAmazon", "WishListAmazon\WishListAmazon.csproj", "{5A60B220-3E07-4864-9F90-8916076EF9EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SgripsRatingControl", "..\SgripsControls\RatingControl\SgripsRatingControl.csproj", "{92F028DD-9AC2-4C10-A711-119E84B3899D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishListModel", "WishListInterface\WishListModel.csproj", "{84B23B23-ACD8-4E80-B0C5-EBEA3A8231F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SgripsDatabase", "..\SgripsUtility\SgripsDatabase\SgripsDatabaseEngine\SgripsDatabase.csproj", "{B312D471-421B-4251-B3FB-752E5C255EA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FB9EE26-4E5C-425C-AD89-B96A1E3934C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FB9EE26-4E5C-425C-AD89-B96A1E3934C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FB9EE26-4E5C-425C-AD89-B96A1E3934C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FB9EE26-4E5C-425C-AD89-B96A1E3934C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5418BB2-A667-4EF0-822E-122CD8EA945C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5418BB2-A667-4EF0-822E-122CD8EA945C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5418BB2-A667-4EF0-822E-122CD8EA945C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5418BB2-A667-4EF0-822E-122CD8EA945C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A60B220-3E07-4864-9F90-8916076EF9EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A60B220-3E07-4864-9F90-8916076EF9EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A60B220-3E07-4864-9F90-8916076EF9EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A60B220-3E07-4864-9F90-8916076EF9EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92F028DD-9AC2-4C10-A711-119E84B3899D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92F028DD-9AC2-4C10-A711-119E84B3899D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92F028DD-9AC2-4C10-A711-119E84B3899D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92F028DD-9AC2-4C10-A711-119E84B3899D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84B23B23-ACD8-4E80-B0C5-EBEA3A8231F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84B23B23-ACD8-4E80-B0C5-EBEA3A8231F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84B23B23-ACD8-4E80-B0C5-EBEA3A8231F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84B23B23-ACD8-4E80-B0C5-EBEA3A8231F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B312D471-421B-4251-B3FB-752E5C255EA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B312D471-421B-4251-B3FB-752E5C255EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B312D471-421B-4251-B3FB-752E5C255EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B312D471-421B-4251-B3FB-752E5C255EA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://asgrignoli.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WpfWishList\\WpfWishList.csproj
+		SccProjectName1 = WpfWishList
+		SccLocalPath1 = WpfWishList
+		SccProjectUniqueName2 = WishList\\WishListConsole.csproj
+		SccProjectName2 = WishList
+		SccLocalPath2 = WishList
+		SccProjectUniqueName3 = WishListAmazon\\WishListAmazon.csproj
+		SccProjectName3 = WishListAmazon
+		SccLocalPath3 = WishListAmazon
+		SccProjectUniqueName4 = ..\\SgripsControls\\RatingControl\\SgripsRatingControl.csproj
+		SccProjectName4 = ../SgripsControls/RatingControl
+		SccLocalPath4 = ..\\SgripsControls\\RatingControl
+		SccProjectUniqueName5 = WishListInterface\\WishListModel.csproj
+		SccProjectName5 = WishListInterface
+		SccLocalPath5 = WishListInterface
+		SccProjectUniqueName6 = ..\\SgripsUtility\\SgripsDatabase\\SgripsDatabaseEngine\\SgripsDatabase.csproj
+		SccProjectName6 = ../SgripsUtility/SgripsDatabase/SgripsDatabaseEngine
+		SccLocalPath6 = ..\\SgripsUtility\\SgripsDatabase\\SgripsDatabaseEngine
+	EndGlobalSection
+EndGlobal

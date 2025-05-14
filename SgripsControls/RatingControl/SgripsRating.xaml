@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="Sgrips.Controls.SgripsRating"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" x:Name="UserControl"
+             d:DesignHeight="40" d:DesignWidth="200">
+    <Grid>
+        <Path Stretch="Fill" Stroke="Black" StrokeThickness="0.5" Data="M 221.417,232.083L 216.374,213.067L 231.652,200.671L 212.008,199.59L 204.94,181.23L 197.842,199.579L 178.196,200.627L 193.453,213.048L 188.379,232.056L 204.907,221.384L 221.417,232.083 Z M 274.409,232.135L 269.367,213.118L 284.645,200.723L 265.001,199.642L 257.933,181.282L 250.835,199.63L 231.189,200.679L 246.446,213.099L 241.372,232.108L 257.899,221.435L 274.409,232.135 Z M 326.91,232.385L 321.867,213.368L 337.145,200.973L 317.501,199.892L 310.433,181.532L 303.335,199.88L 283.689,200.929L 298.946,213.349L 293.872,232.358L 310.4,221.685L 326.91,232.385 Z M 380.16,232.385L 375.117,213.368L 390.395,200.973L 370.751,199.892L 363.683,181.532L 356.585,199.88L 336.939,200.929L 352.196,213.349L 347.122,232.358L 363.65,221.685L 380.16,232.385 Z M 433.41,232.385L 428.367,213.368L 443.645,200.973L 424.001,199.892L 416.933,181.532L 409.835,199.88L 390.189,200.929L 405.446,213.349L 400.372,232.358L 416.9,221.685L 433.41,232.385 Z " Margin="0">
+            <Path.Fill>
+                <LinearGradientBrush StartPoint="3.55262e-007,0.500002" EndPoint="1,0.500001">
+                    <GradientStop Color="{Binding RateColor,NotifyOnSourceUpdated=True,NotifyOnTargetUpdated=True,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay, ElementName=UserControl}" 
+                                  Offset="{Binding RateValue, ElementName=UserControl}"/>
+                    <GradientStop Color="#06FCFCFC" 
+                                  Offset="{Binding RateValue, ElementName=UserControl}"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+
+    </Grid>
+</UserControl>

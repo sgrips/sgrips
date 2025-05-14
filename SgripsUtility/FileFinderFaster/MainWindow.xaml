@@ -1,0 +1,117 @@
+﻿<Custom:RibbonWindow 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Custom="http://schemas.microsoft.com/winfx/2006/xaml/presentation/ribbon" x:Class="FileFinderFaster.MainWindow"
+        Title="SA - Fast Search" Height="350" Width="525" 
+        xmlns:model="clr-namespace:BRT.Framework.FileFinderFaster.UI" WindowStyle="SingleBorderWindow"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="Images/consigneeImportg.gif">
+    <Custom:RibbonWindow.Resources>
+        <model:StateFinder  x:Key="StateFinder"></model:StateFinder>
+    </Custom:RibbonWindow.Resources> 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Custom:Ribbon Title="Ricerca File" >
+            <Custom:Ribbon.ContextualTabGroups >
+                <Custom:RibbonContextualTabGroup Visibility="Visible" Header="RicercaContext"></Custom:RibbonContextualTabGroup>
+            </Custom:Ribbon.ContextualTabGroups>
+            <Custom:Ribbon.ApplicationMenu>
+                <Custom:RibbonApplicationMenu x:Name="_ribbonApplicationMenu"  Background="#FFD7172A" BorderBrush="#FFD7172A"  >
+                    <Custom:RibbonApplicationMenu.ControlSizeDefinition>
+                        <Custom:RibbonControlSizeDefinition ImageSize="Small" />
+                    </Custom:RibbonApplicationMenu.ControlSizeDefinition>
+
+                    <Custom:RibbonApplicationMenu.AuxiliaryPaneContent>
+                        <Grid Height="400"></Grid>
+                    </Custom:RibbonApplicationMenu.AuxiliaryPaneContent>
+
+                    <Custom:RibbonApplicationMenu.FooterPaneContent >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Custom:RibbonButton  Grid.Column="1" Grid.Row="1"  x:Name="btnExit"
+										 SmallImageSource="Images/exit.png"
+										 Label="Uscita" HorizontalAlignment="Right" />
+                        </Grid>
+                    </Custom:RibbonApplicationMenu.FooterPaneContent >
+
+                    <!--<Custom:RibbonApplicationMenuItem   x:Name="mnuDataBase"
+										 ImageSource="/Bartolini.EasySpedDE;component/Images/DataTables.png"
+										 Header="DataBase" >
+                        <Custom:RibbonApplicationMenuItem  x:Name="mnuDataBaseDelSpedizioni" Click="mnuDataBaseDelSpedizioni_Click"
+										 ImageSource="/Bartolini.EasySpedDE;component/Images/shipmentDeleteAll.png"
+										 Header="Vuota Tabella Spedizioni" />
+                        <Custom:RibbonApplicationMenuItem x:Name="mnuDataBaseDelDestinatari"
+										 ImageSource="/Bartolini.EasySpedDE;component/Images/ConsigneeDeleteAll.png"
+										 Header="Vuota Tabella Destinatari" Click="mnuDataBaseDelDestinatari_Click" />
+                    </Custom:RibbonApplicationMenuItem>-->
+                </Custom:RibbonApplicationMenu>
+
+            </Custom:Ribbon.ApplicationMenu>
+
+            <Custom:RibbonTab Header="Ricerca"   >
+                <Custom:RibbonGroup>
+                    <Custom:RibbonGroup.GroupSizeDefinitions >
+                        <Custom:RibbonGroupSizeDefinition>
+                            <Custom:RibbonControlSizeDefinition  ImageSize="Large" />
+                            <Custom:RibbonControlSizeDefinition ImageSize="Large" />
+                        </Custom:RibbonGroupSizeDefinition>
+                    </Custom:RibbonGroup.GroupSizeDefinitions>
+                    <Custom:RibbonButton Label="Avvia" x:Name="RicercaButton"  Click="RicercaButton_Click" LargeImageSource="Images\consigneeImportg.gif"   >
+                        <Border BorderBrush="Black" BorderThickness="1" Height="100" Width="100"/>
+                    </Custom:RibbonButton>
+                    <Custom:RibbonButton Label="Importa" x:Name="ImportaButton" Click="ImportaButton_Click" LargeImageSource="Images\consigneeimportLarge.png"   />
+                </Custom:RibbonGroup>
+                
+            </Custom:RibbonTab>
+        </Custom:Ribbon>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <BulletDecorator Margin="0,10"  >
+                <TextBox  x:Name="txtPercorsoRicerca" HorizontalAlignment="Stretch"  />
+                <BulletDecorator.Bullet>
+                    <Button Width="120" Click="SelPercorsoButton_Click" x:Name="SelPercorsoButton" Content="Seleziona Percorso"/>
+                </BulletDecorator.Bullet>
+            </BulletDecorator>
+
+            <BulletDecorator Margin="0,10"  >
+                <BulletDecorator.Bullet>
+                    <Label Width="120" Content="nome file:"  HorizontalContentAlignment="Right" Height="23"    />
+                </BulletDecorator.Bullet>
+                <TextBox  x:Name="txtNomeFile" HorizontalContentAlignment="Stretch"  />
+            </BulletDecorator>
+            <StackPanel Orientation="Horizontal">
+                <BulletDecorator Margin="0,10"  >
+                    <BulletDecorator.Bullet>
+                        <Label   Content="File Da Ricercare:" ></Label>
+                    </BulletDecorator.Bullet>
+                    <Label    Content="{Binding NotifyOnTargetUpdated=True, NotifyOnSourceUpdated=True, Source={StaticResource StateFinder},Path=FileSearchCount}" x:Name="FileDaRicercare"></Label>
+                </BulletDecorator>
+                <BulletDecorator Margin="0,10"  >
+                    <BulletDecorator.Bullet>
+                        <Label Width="120" Content="Percorsi Esamininati:" HorizontalContentAlignment="Right"></Label>
+                    </BulletDecorator.Bullet>
+                    <Label    Content="{Binding NotifyOnTargetUpdated=True, NotifyOnSourceUpdated=True, Source={StaticResource StateFinder},Path=DirProgess}" x:Name="DirTotalLabel"></Label>
+                </BulletDecorator>
+                <BulletDecorator Margin="0,10"  >
+                    <BulletDecorator.Bullet>
+                        <Label   Content="Trovati:" ></Label>
+                    </BulletDecorator.Bullet>
+                    <Label    Content="{Binding NotifyOnTargetUpdated=True, NotifyOnSourceUpdated=True, Source={StaticResource StateFinder},Path=FileCount}" x:Name="TrovatiLabel"></Label>
+                </BulletDecorator>
+            </StackPanel>
+            <BulletDecorator Margin="0,10" Grid.Row="2"   >
+                <BulletDecorator.Bullet>
+                    <Label Width="120"  Content="Totale Directory:" ></Label>
+                </BulletDecorator.Bullet>
+                <Label   Content="{Binding NotifyOnTargetUpdated=True, NotifyOnSourceUpdated=True, Source={StaticResource StateFinder},Path=DirCount}"  x:Name="TotalDirs"></Label>
+            </BulletDecorator>
+        </StackPanel>
+
+    </Grid>
+</Custom:RibbonWindow>

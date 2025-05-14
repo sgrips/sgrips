@@ -1,0 +1,45 @@
+﻿<Window x:Class="Sgrips.WishList.WPF.EditWishList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sgrips.WishList.WPF"
+        mc:Ignorable="d"
+        Title="Codici Lista Desideri" Height="397" Width="404" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <CollectionViewSource x:Key="WishListCodes" ></CollectionViewSource>
+    </Window.Resources>
+
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static local:EditWishList.AddWishCode}" CanExecute="AddWishCodeCmdCanExecute" Executed="AddWishCodeCmdExecuted" />
+    </Window.CommandBindings>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" HorizontalAlignment="Stretch" LastChildFill="True" >
+            <Button Content="Add" Height="25"  DockPanel.Dock="Right"  x:Name="cmdAdd" Command="{x:Static local:EditWishList.AddWishCode}" ></Button>
+            <TextBox  Background="LightBlue" x:Name="WishCodeTextBox"
+                      Text="{Binding Tag, RelativeSource={RelativeSource Self},UpdateSourceTrigger=PropertyChanged}"
+                     HorizontalAlignment="Stretch" DockPanel.Dock="Left"></TextBox>
+        </DockPanel>
+        <ListBox x:Name="WishCodesListBox" Grid.Row="1" ItemsSource="{Binding Path=.,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,NotifyOnSourceUpdated=True,NotifyOnTargetUpdated=True, Source={StaticResource WishListCodes}}" >
+            <ListBox.ItemTemplate >
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="5" Foreground="Red" Text="{Binding Path=Id}"></TextBlock>
+                        <TextBlock Margin="5" Text="{Binding Path=Description}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <DockPanel Grid.Row="2" LastChildFill="False"   >
+            <Button DockPanel.Dock="Right" Width="80" Content="Chiudi" Margin="5" Height="30" x:Name="cmdChiudi" Click="cmdChiudi_Click"  />
+            <Button DockPanel.Dock="Right" Width="80" Content="Salva" Margin="5" Height="30" x:Name="cmdSalva" Click="cmdSalva_Click" />
+        </DockPanel>
+
+    </Grid>
+</Window>

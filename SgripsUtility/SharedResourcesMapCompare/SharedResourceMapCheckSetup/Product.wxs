@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+  <?define projectRoot = "C:\Users\sgrignolia\Documents\Projects\" ?>
+  <?define productVersion = "!(bind.FileVersion.D_CABF4E11DCB5442D85E9C32628FB76F4)" ?>
+  <Product Id="*"   Name="SharedResourceCheckService" Codepage="1252" Language="1040" Version="$(var.productVersion)" Manufacturer="BRT S.p.A" UpgradeCode="0b8c283d-acfc-43a6-8b35-83fb77bbb5ae">
+    <Package  Compressed="yes" InstallerVersion="200"  Languages="1040" Manufacturer="BRT S.p.A" InstallPrivileges="elevated" InstallScope ="perMachine" Platform="x64" />
+    <MajorUpgrade   Schedule ="afterInstallInitialize" DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <Media Id="1" Cabinet="SharedResourceCheckServiceCab"  EmbedCab="yes" />
+    
+    <Icon Id="icon.ico" SourceFile="Icon\favicon.ico" />
+    <Property Id="ARPPRODUCTICON" Value="icon.ico" />
+    
+    <Feature Id="ProductFeature" Title="BRT CheckShareResourceMapping - Service" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+    </Feature>
+
+    <DirectoryRef Id="TARGETDIR">
+      <Directory Id="CommonAppDataFolder" >
+        <Directory Id="CompanyDataDirectory" Name="BRT S.p.A">
+          <Component Id="SharedFolderComponent"  Guid="22B71FA2-BB34-410D-9235-A80DB40B7CEA">
+            <CreateFolder   Directory="CompanyDataDirectory" >
+              <Permission User="Everyone" GenericAll="yes" />
+            </CreateFolder>
+          </Component>
+          <Directory Id="ProductNameFolder" Name="SharedResourceCheck">
+            <Component Id="ProductNameComponent"  Guid="FE7225C8-AB6F-41F7-9A80-C39C8F6F779E">
+              <CreateFolder   Directory="ProductNameFolder" >
+                <Permission User="Everyone" GenericAll="yes" />
+              </CreateFolder>
+            </Component>
+          </Directory>
+        </Directory>
+      </Directory>
+    </DirectoryRef>
+
+    <?if $(var.Platform) = x86 ?>
+    <?define PlatformProgramFilesFolder = "ProgramFilesFolder" ?>
+    <?else?>
+    <?define PlatformProgramFilesFolder = "ProgramFiles64Folder" ?>
+    <?endif?>
+
+    <Feature Id="DefaultFeature" ConfigurableDirectory="TARGETDIR" Level="1">
+      <ComponentRef Id="C_CABF4E11DCB5442D85E9C32628FB76F4" Primary="yes" />
+      <ComponentRef Id="SharedFolderComponent" />
+      <ComponentRef Id="ProductNameComponent" />
+    </Feature>
+
+    <SetProperty  Id="TARGETDIR"  Before="AppSearch" Value="[$(var.PlatformProgramFilesFolder)][Manufacturer]\[ProductName]"></SetProperty>
+    <SetProperty Id ="WIXUI_INSTALLDIR" Value="TARGETDIR" Before="AppSearch"></SetProperty>
+
+    <UI>
+      <UIRef Id="WixUI_InstallDir"/>
+    </UI>
+
+    <!--<UIRef Id="WixUI_ErrorProgressText" />-->
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+    </Directory>
+  </Fragment>
+  <Fragment>
+    <ComponentGroup Id="ProductComponents" Directory="TARGETDIR" >
+      <Component Id="C_CABF4E11DCB5442D85E9C32628FB76F4" Guid="CABF4E11-DCB5-442D-85E9-C32628FB76F4">
+        <File Id="D_CABF4E11DCB5442D85E9C32628FB76F4" Name="SharedResourceMapCheckService.exe" KeyPath="yes"  Assembly=".net" AssemblyManifest="D_CABF4E11DCB5442D85E9C32628FB76F4"
+              AssemblyApplication="D_CABF4E11DCB5442D85E9C32628FB76F4" DiskId="1" Source="$(var.SharedResourceMapCheck.Service.TargetPath)" />
+        <ServiceInstall
+          Id="SharedResourceCheckService"
+          Type="ownProcess"
+          Vital="yes"
+          Name="SharedResourceCheckService"
+          DisplayName="Bartolini Compare Shared Resource Mapping"
+          Description="Il servizio verifica il mapping a coppie di una lista di server, ed invia un email (CEDALERT) riepilogativa con il risultato del confronto"
+          Start="auto"
+          Account="LocalSystem"
+          ErrorControl="ignore"
+          Interactive="no" >
+        </ServiceInstall>
+        <ServiceControl Id="SharedResourceCheckService" Start="install" Stop="both" Remove="uninstall" Name="SharedResourceCheckService" Wait="no" />
+      </Component>
+
+     <Component Id="C_8676C52A121B4FCC901BE4A134A6D844" Guid="8676C52A-121B-4FCC-901B-E4A134A6D844">
+       <!--<util:XmlFile Id="UpdateDBPath"
+            Action="setValue"
+            File="[TARGETDIR]SharedResourceMapCheckService.exe.config"
+            SelectionLanguage="XPath"
+            Permanent="yes"
+            ElementPath="/configuration/connectionStrings/add"
+            Name="connectionString" Value="data source=(LocalDB)\v11.0;Initial Catalog=ArchiveBackupBRT;attachdbfilename=D:\BartBackupDB\ArchiveBackupBRT.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" />-->
+        <File Id="D_8676C52A121B4FCC901BE4A134A6D844" Name="SharedResourceMapCheckService.exe.config"  KeyPath="yes"  DiskId="1" Source="$(var.SharedResourceMapCheck.Service.TargetDir)" />
+      </Component>
+
+      <Component Id="C_73B8CBDC6DCE41D2A1B36EEE6A349D64" Guid="73B8CBDC-6DCE-41D2-A1B3-6EEE6A349D64">
+        <File Id="D_73B8CBDC6DCE41D2A1B36EEE6A349D64"  AssemblyApplication="D_73B8CBDC6DCE41D2A1B36EEE6A349D64" AssemblyManifest="D_73B8CBDC6DCE41D2A1B36EEE6A349D64" Name="SharedResourceMapCheck.Engine.dll" Assembly=".net"  KeyPath="yes"  DiskId="1" Source="$(var.SharedResourceMapCheck.Service.TargetDir)" />
+      </Component>
+
+      <Component Id="C_B0EC145D49D641B5BD62A079B92D5DB4" Guid="B0EC145D-49D6-41B5-BD62-A079B92D5DB4">
+        <File Id="D_B0EC145D49D641B5BD62A079B92D5DB4"  AssemblyApplication="D_B0EC145D49D641B5BD62A079B92D5DB4" AssemblyManifest="D_B0EC145D49D641B5BD62A079B92D5DB4" Name="Sgrips.Framework.FileSystemDatabase.dll" Assembly=".net"  KeyPath="yes"  DiskId="1" Source="$(var.SharedResourceMapCheck.Service.TargetDir)" />
+      </Component>
+
+      <Component Id="C_CB4217FA9D3543B59AF9FE72C6166201" Guid="CB4217FA-9D35-43B5-9AF9-FE72C6166201">
+        <File Id="D_CB4217FA9D3543B59AF9FE72C6166201"  AssemblyApplication="D_CB4217FA9D3543B59AF9FE72C6166201" AssemblyManifest="D_CB4217FA9D3543B59AF9FE72C6166201" Name="Newtonsoft.Json.dll" Assembly=".net"  KeyPath="yes"  DiskId="1" Source="$(var.SharedResourceMapCheck.Service.TargetDir)" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

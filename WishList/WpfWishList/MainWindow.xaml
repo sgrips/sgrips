@@ -1,0 +1,119 @@
+﻿<Window xmlns:Controls="clr-namespace:Sgrips.Controls;assembly=SgripsRating"  x:Class="Sgrips.WishList.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sgrips.WishList.WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Loaded="Window_Loaded" Height="350" Width="525" WindowState="Maximized">
+    <Window.Resources>
+        <CollectionViewSource  x:Key="wishList"></CollectionViewSource>
+        <CollectionViewSource  x:Key="wishListCodes"></CollectionViewSource>
+
+        <local:Base64ImageConverter x:Key="Base64ImageConverter"/>
+        <local:RatingConverter x:Key="RatingConverter"/>
+        <local:RatingColorConverter x:Key="RatingColorConverter"/>
+
+        <AlternationConverter x:Key="BackgroundConverter">
+            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightColorKey}}"></SolidColorBrush>
+            <SolidColorBrush>White</SolidColorBrush>
+        </AlternationConverter>
+
+        <AlternationConverter x:Key="AlternateForegroundConverter">
+            <SolidColorBrush>Black</SolidColorBrush>
+            <SolidColorBrush>Black</SolidColorBrush>
+        </AlternationConverter>
+
+
+        <Style x:Key="alternatingWithBinding" TargetType="{x:Type ListBoxItem}">
+            <Setter Property="Background"
+              Value="{Binding RelativeSource={RelativeSource Self},
+                     Path=(ItemsControl.AlternationIndex),
+                     Converter={StaticResource BackgroundConverter}}"/>
+
+            <Setter Property="Foreground"
+              Value="{Binding RelativeSource={RelativeSource Self},
+                     Path=(ItemsControl.AlternationIndex),
+                     Converter={StaticResource AlternateForegroundConverter}}"/>
+            <Setter Property="Height" Value="80"></Setter>
+        </Style>
+
+        <DataTemplate x:Key="Rating">
+            <Controls:SgripsRating x:Name="rating" Width="200" Height="40"
+                        RateColor="{Binding Path=ReducedPrice,NotifyOnSourceUpdated=True,NotifyOnTargetUpdated=True,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay,Converter={StaticResource RatingColorConverter}}"
+                        RateValue="{Binding Path=ReducedPrice,Mode=TwoWay,Converter={StaticResource RatingConverter}}"  />
+        </DataTemplate>
+    </Window.Resources>
+
+    <Window.CommandBindings>
+        <CommandBinding  Command="local:MainWindow.WishChangeCmd" Executed="WishChangeCmd_Executed" CanExecute="WishChangeCmd_CanExecute" />
+        <CommandBinding  Command="local:MainWindow.WishRefreshCmd" Executed="WishRefreshCmd_Executed" CanExecute="WishRefreshCmd_CanExecute" />
+    </Window.CommandBindings>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" IsMainMenu="True">
+            <MenuItem Header="_Gestione"  >
+                <MenuItem Header="_Modifica Liste" x:Name="MenuModificaListe" Click="MnuModificaListe_Click"/>
+                <Separator/>
+                <MenuItem Header="_Uscita" Click="Button_Close_Click"/>
+            </MenuItem>
+
+            <MenuItem Header="_Elenco" x:Name="ElencoMnu"  ItemsSource="{Binding Source={StaticResource ResourceKey=wishListCodes}}" >
+            </MenuItem>
+
+        </Menu>
+        <ListView Grid.Row="1"    FontSize="18px" x:Name="listView"
+                  ItemContainerStyle="{StaticResource alternatingWithBinding}"
+                  AlternationCount="2" ItemsSource="{Binding Source={StaticResource ResourceKey=wishList}}"  >
+            <ListView.View >
+
+                <GridView>
+                    <GridView.ColumnHeaderContainerStyle>
+                        <Style TargetType="GridViewColumnHeader">
+                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                        </Style>
+                    </GridView.ColumnHeaderContainerStyle>
+                    <GridViewColumn Header="IMG">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Path=Image,Mode=TwoWay , Converter={StaticResource Base64ImageConverter}}" ></Image>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn   Header="Description">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Width="1000px" TextWrapping="Wrap" Text="{Binding Path=Description,Mode=TwoWay }"></TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Price"  DisplayMemberBinding="{Binding Path=OriginalPrice,Mode=TwoWay }"></GridViewColumn>
+                    <GridViewColumn Header="NewPrice" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Foreground="Blue" Text="{Binding Path=NewPrice,Mode=TwoWay }"></TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="%Reduction" Width="80"  DisplayMemberBinding="{Binding Mode=TwoWay, Path=ReducedPrice}"></GridViewColumn>
+                    <GridViewColumn Header="Rating" CellTemplate="{StaticResource Rating}">
+                    </GridViewColumn>
+                    <GridViewColumn Header="InStock" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsEnabled="False" Foreground="Blue" IsChecked="{Binding Path=InStock,Mode=TwoWay }"></CheckBox>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+    </Grid>
+</Window>
